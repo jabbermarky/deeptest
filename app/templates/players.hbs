@@ -1,0 +1,18 @@
+<section id="players">
+    <h1>Players Template</h1>
+    <table>
+    <tbody>
+    {{#each}}
+    	<tr>
+    	<td>{{shortNameInitialLast}}</td>
+    	<td>#{{jerseyNumber}}</td>
+    	<td>{{position}}</td>
+    	</tr>
+    {{else}}
+    	<tr>
+	    <td>no players...</td>
+		</tr>
+    {{/each}}
+    </tbody>
+    </table>
+</section>

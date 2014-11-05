@@ -2,14 +2,13 @@
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-var app = new EmberApp();
-//var app = new EmberApp({
-//  lessOptions: {
-//  	inputFile: 'godeeptest.less',
-//  	outputFile: 'godeeptest.css'
-//  }
-//});
-
+var app = new EmberApp({
+    minifyCSS: {
+        enabled: true,
+        options: {}
+    }
+});
 // import bootstrap.js into vendor.js
-// app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+
 module.exports = app.toTree();

@@ -1,3 +1,45 @@
-<section id="games">
-    <h1>Games Template</h1>
-</section>
+{{! this page uses a button row in the navbar. modify navbar with navbar-button-row for proper button spacing}}
+<div class="navbar navbar-inverse navbar-button-row">
+    <div class="container-fluid block-grid-row block-color-header">
+        <div class="block block-grid-row-first">
+            {{#link-to 'dashboard'}}◀{{/link-to}}
+        </div>
+        <div class="block block-color-header">
+            <span class="block-line1a">line1a</span>
+            <span class="block-line2a">line2a</span>
+            <span class="block-line2c">header color</span>
+        </div>
+        <div class="block pull-right block-grid-row-last">
+            <span class="block-line1b">line1b</span>
+            <span class="block-line2b">line2b</span>
+            <span class="block-line2c">aligned left</span>
+        </div>
+        <div class="block block-active pull-right">
+            <span class="block-line1">line1</span>
+            <span class="block-line2">line2</span>
+            <span class="block-line2c">active</span>
+        </div>
+        <div class="block pull-right">
+            <span class="block-line1">line1</span>
+            <span class="block-line2">line2</span>
+            <span class="block-badge">badge</span>
+        </div>
+        <div class="block pull-right">
+            <span class="block-grid-header">grid header</span>
+            <span class="block-line2c">line2c</span>
+        </div>
+        <div class="block pull-right">
+            <span>default text</span>
+        </div>
+    </div>
+</div>
+
+{{! this page uses a button row in the navbar. modify container with navbar-button-row for proper button spacing}}
+<div class='container-fluid container-button-row'>
+    <div class="wrapper-leftnav" style="height:100%;">
+        <div cass="content-main">
+                <h1>Games Template</h1>
+        </div>
+    </div>
+</div>
+

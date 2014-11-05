@@ -1,17 +1,29 @@
-<section id="reports">
-    <h1>Reports Template</h1>
-    <table>
-    <tbody>
-    {{#each}}
-    	<tr>
-    	<td>{{name}}</td>
-    	<td>{{description}}</td>
-    	</tr>
-    {{else}}
-    	<tr>
-	    <td>no reports...</td>
-		</tr>
-    {{/each}}
-    </tbody>
-    </table>
-</section>
+<div class="navbar navbar-inverse navbar-button-row">
+    <div class="container-fluid block-grid-row block-color-header">
+        <div class="block block-grid-row-first">
+            {{#link-to 'dashboard'}}◀{{/link-to}}
+        </div>
+    </div>
+</div>
+{{! this page uses a button row in the navbar. modify container with navbar-button-row for proper button spacing}}
+<div class='container-fluid container-button-row'>
+    <div class="wrapper-leftnav" style="height:100%;">
+        <div cass="content-main">
+            <h1>Reports Template</h1>
+            <table>
+                <tbody>
+                {{#each}}
+                    <tr>
+                        <td>{{name}}</td>
+                        <td>{{description}}</td>
+                    </tr>
+                {{else}}
+                    <tr>
+                        <td>no reports...</td>
+                    </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

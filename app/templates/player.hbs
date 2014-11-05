@@ -1,0 +1,82 @@
+{{! this page uses a button row in the navbar. modify navbar with navbar-button-row for proper button spacing}}
+<div class="navbar navbar-inverse navbar-button-row">
+    <div class="container-fluid block-grid-row block-color-header">
+        <div class="block block-grid-row-first">
+            {{#link-to 'dashboard'}}◀︎{{/link-to}}
+        </div>
+        <div class="block block-color-header">
+            <span class="block-line1a">{{fullName}} &nbsp; #{{jerseyNumber}} / schoolClass </span>
+            <span class="block-line2a">Team Name</span>
+        </div>
+        <div class="block block-active pull-right block-grid-row-last">
+            <span class="block-line1">Avg Scout Rpt</span>
+            <span class="block-line2">4.81</span>
+        </div>
+        <div class="block pull-right">
+            <span class="block-line1">Avg Game Gr</span>
+            <span class="block-line2">94%</span>
+            <span class="block-badge">265</span>
+        </div>
+        <div class="block pull-right">
+            <span>{{position}}</span>
+        </div>
+    </div>
+</div>
+
+{{! this page uses a button row in the navbar. modify container with navbar-button-row for proper button spacing}}
+<div class='container-fluid container-button-row'>
+    <div class="wrapper-leftnav">
+        <!--h1>Player Details for {{fullName}}</h1-->
+
+        {{!my-label value=fullName classNames="block-color-featuretext"}}
+
+        <div class="content-nav" style="background-color: #4a4a4a;color:#fff;">
+            <div class="player-row">First Name {{firstName}}</div>
+            <div class="player-row">Last Name {{lastName}}</div>
+            <div class="player-row">Jersey #{{jerseyNumber}}</div>
+            <div class="player-row">Playing @{{position}}</div>
+            <div class="player-row">AKA {{shortNameInitialFirst}}</div>
+            <div class="player-row">AKA {{shortNameInitialLast}}</div>
+        </div>
+        <div class="content-main">
+            <div class="block-grid-row block-grid-row-separator">
+                <div class="block block-color-heading1 block-grid1 block-grid-row-first">
+                    <span class="block-grid-header">Scouting Reports</span>
+                    <span class="block-line2c">click to view detail</span>
+                </div>
+                <div class="block block-color-heading2 block-grid2">
+                    <span class="block-grid-header">Major Factors</span>
+                </div>
+                <div class="block block-color-heading3 block-grid2">
+                    <span class="block-grid-header">Critical Factors</span>
+                </div>
+                <div class="block block-color-heading4 block-grid2">
+                    <span class="block-grid-header">Position Skills</span>
+                </div>
+                <div class="block block-color-heading5 block-grid2 block-grid-row-last">
+                    <span class="block-grid-header">Overall Grade</span>
+                </div>
+            </div>
+            <div class="block-grid-row block-grid-row-separator">
+                <div class="block block-color-column1 block-grid1 block-grid-row-first">
+                    <span class="block-line1b">11-30-13 by N. Hansen</span>
+                    <span class="block-line2b">Target Match: 85%</span>
+                    <span class="block-line2b">Position Rank: 1 of 4</span>
+                    <span class="block-line2b">Overall Rank: 12 of 97</span>
+                </div>
+                <div class="block block-color-column2 block-grid2">
+                    <span>4.85</span>
+                </div>
+                <div class="block block-color-column3 block-grid2">
+                    <span>4.95</span>
+                </div>
+                <div class="block block-color-column4 block-grid2">
+                    <span>5.20</span>
+                </div>
+                <div class="block block-color-column5 block-grid2 block-grid-row-last">
+                    <span>5.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

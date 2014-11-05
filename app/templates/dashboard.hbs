@@ -1,0 +1,20 @@
+{{! this page uses a button row in the navbar. modify navbar with navbar-button-row for proper button spacing}}
+
+
+{{! this page uses a button row in the navbar. modify container with navbar-button-row for proper button spacing}}
+<div class='container-fluid' style="height:500px;">
+    <div class="wrapper-leftnav" style="height:100%;">
+        <div class="content-nav block-color-header" style="height:100%;">
+            {{#link-to 'players' classNames="button-new"}}players{{/link-to}}
+            {{#link-to 'games' classNames="button-new"}}games{{/link-to}}
+            {{#link-to 'reports' classNames="button-new"}}reports{{/link-to}}
+            {{#link-to 'admin' classNames="button-new"}}admin{{/link-to}}
+        </div>
+        <div class="content-main" style="background:#bbb;">
+            <h1>Dashboard</h1>
+        </div>
+    </div>
+</div>
+<!--footer style="background:#DDD;">
+    <p>application footer</p>
+</footer-->

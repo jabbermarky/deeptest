@@ -1,23 +1,294 @@
+body {
+  //min-height: 2000px;
+  padding-top: 50px;	// to account for the fixed navbar at the top of the page
+}
+
+// Placeholder text
+.myplaceholder(@color: @input-color-placeholder) {
+  &::-moz-placeholder {
+    color: @color;   // Firefox
+    opacity: 1;
+    font-style:italic;
+    margin-left:5px;
+  } // See https://github.com/twbs/bootstrap/pull/11526
+  &:-ms-input-placeholder {
+    color: @color;
+    font-style:italic;
+    margin-left:5px;
+  } // Internet Explorer 10+
+  &::-webkit-input-placeholder  {
+    color: @color;
+    font-style:italic;
+    margin-left:5px;
+  } // Safari and Chrome
+}
+.row-login {
+  line-height: 25px;
+  margin-top:10px;
+  margin-bottom:10px;
+  .text-center();
+  input {
+    margin-top:10px;
+    margin-bottom:10px;
+    border-color: #4a4a4a;
+    .myplaceholder(#252525);
+  }
+}
 .button-new {
 	-webkit-font-smoothing:antialiased;
-	background-color: rgb(149,149,149);	/*set this with a modifier */
+	background-color: #4a4a4a;	/*set this with a modifier */
 	box-sizing: border-box;
 	color: #FFF;
 	display:block;
 	font-family:balanceweb, Arial;
-	font-size: 28px;
-	height: 86px;
-	line-height:86px;
-	outline-color:#FFF;
-	outline-style:none;
-	outline-width:0px;
+	font-size: 24px;                    /* set this with a modifier */
+	line-height:80px;                   /* set this with a modifier */
+    height: 80px;
+	//outline-color:#FFF;
+	//outline-style:none;
+	//outline-width:0px;
 	text-align:center;
 	text-decoration:none;
 	text-rendering:optimizelegibility;
-	width:215px;
+	width:100%;
 	word-wrap: break-word;
 	float:left;
-	margin-right:10px;
+	margin-right:0px;
+    margin-left:0px;
+    margin-top:20px;
+
+  &:hover,
+  &:focus {
+    background-color: #4888EF;
+    color:#fff;
+    text-decoration: none;
+  }
+}
+
+.player-row {
+  margin-left: 10px;
+  //display:block;
+  line-height: 24px;
+  font-family: balanceweb,Arial;
+  font-size: 14px;
+}
+
+.block-grid-row {
+  display:block;
+  height:80px;
+
+  .block-grid-row-last {
+    margin-right:0px;
+  }
+
+  .block-grid-row-first {
+    margin-left:0px;
+  }
+}
+
+.block-grid-row-separator {
+  height:90px;
+  border-bottom: solid;
+  border-bottom-width: 2px;
+  margin-bottom:10px;
+  padding-bottom:10px;
+}
+
+.block {
+  -webkit-font-smoothing:antialiased;
+  box-sizing: border-box;
+  display:block;
+  font-family:balanceweb, Arial;
+  font-weight:bold;
+
+  //outline-color:#FFF;
+  //outline-style:none;
+  //outline-width:0px;
+  text-align:center;
+  text-decoration:none;
+  text-rendering:optimizelegibility;
+  word-wrap: break-word;
+  float:left;
+  margin-left:5px;
+  margin-right:5px;
+  position:relative;
+
+  height: 80px;                         /* set this with a modifier */
+  //width:215px;                        /* set this with a modifier */
+  background-color: rgb(149,149,149);	/* set this with a modifier */
+  background-color: #4a4a4a;
+  color: #FFF;                          /* set this with a modifier */
+  font-size: 28px;                      /* set this with a modifier */
+  line-height:80px;                     /* set this with a modifier */
+  span {
+    //margin-right:10px;
+    //margin-left:10px;
+    padding-left:5px;
+    padding-right:5px;
+  }
+  a {
+    color:#fff;
+  }
+  a:link {
+    text-decoration: none;
+    margin-left:10px;
+    margin-right:10px;
+  }
+  .block-line1 {
+    margin-left:10px;
+    margin-right:10px;
+    margin-top:10px;
+    font-size: 16px;
+    line-height:18px;
+    display:block;
+  }
+  .block-line2 {
+    margin-right:10px;
+    margin-left:10px;
+    margin-top:10px;
+    font-size: 28px;
+    font-weight:bolder;
+    line-height:30px;
+    display:block;
+  }
+  .block-line1a {
+    margin-top:10px;
+    margin-right:10px;
+    margin-left:10px;
+    font-size: 22px;
+    line-height:24px;
+    display:block;
+    text-align: left;
+  }
+  .block-line2a {
+    margin-right:10px;
+    margin-left:10px;
+    margin-top:10px;
+    font-size: 16px;
+    line-height:18px;
+    display:block;
+    text-align: left;
+  }
+  .block-grid-header {
+    margin-right:10px;
+    margin-left:10px;
+    margin-top:10px;
+    font-size: 20px;
+    line-height:22px;
+    display:block;
+    font-weight:bold;
+  }
+  .block-line1b {
+    margin-left:10px;
+    margin-right:10px;
+    margin-top:10px;
+    margin-bottom:3px;
+    display:block;
+    text-align: left;
+    font-size: 17px;
+    line-height:17px;
+    font-weight:bold;
+  }
+  .block-line2b {
+    margin-left:10px;
+    margin-right:10px;
+    display:block;
+    text-align: left;
+    font-size: 13px;
+    line-height:16px;
+    font-weight:normal;
+  }
+  .block-line2c {
+    position: absolute;
+    bottom: 0px;
+    left:0px;
+    margin-left:10px;
+    margin-right:10px;
+    display:block;
+    text-align: left;
+    font-size: 14px;
+    line-height:16px;
+    font-weight:bold;
+    padding-bottom: 3px;
+  }
+  .block-badge {
+    position:absolute;
+    bottom:0px;
+    right:0px;
+    font-size: 14px;
+    line-height:16px;
+    display: inline-block;
+    padding: 3px 7px;
+    white-space: nowrap;
+  }
+  .block-line1d {
+    margin-left:10px;
+    margin-right:10px;
+    font-size: 18px;
+    line-height:20px;
+  }
+}
+.block-grid1 {
+  width:245px;
+  min-width: 245px;
+  text-align: left;
+}
+.block-grid2 {
+  width:119px;
+  min-width:119px;
+}
+.block-center {
+  float:none;
+}
+
+.block-color-heading1 {
+  background-color: #949494;
+}
+.block-color-heading2 {
+  background-color: #0E4B8C;
+}
+.block-color-heading3 {
+  background-color: #09326A;
+}
+.block-color-heading4 {
+  background-color: #051b4d;
+}
+.block-color-heading5 {
+  background-color: #01042e;
+}
+.block-color-column1 {
+  background-color: #959595;
+}
+.block-color-column2 {
+  background-color: #5681ae;
+}
+.block-color-column3 {
+  background-color: #526f96;
+}
+.block-color-column4 {
+  background-color: #505f82;
+}
+.block-color-column5 {
+  background-color: #4d4f6c;
+}
+
+.block-color-header {
+  background-color: #252525;
+  color:#fff;
+}
+
+.block-active {
+  background-color: #4888EF;
+}
+
+.block-color-featuretext {
+  color: #4888EF;
+}
+
+.row-block {
+  float:left;
+  display:block;
+  height:80px;
 }
 
 .button-header {
@@ -26,13 +297,63 @@
 }
 
 .button-altcolor {
-  background-color: #074F8A; 
+  background-color: #4887EE;
 }
 
+//
+// alternate text colors in inverse navbars
+//
 .navbar-inverse {
   .navbar-textalt {
-    color: blue;
   	.navbar-text;
+    color: #FFF;
+    font-size: 22px;
+    font-weight: normal;
+    margin-top:5px;
+    margin-bottom:0px;
   }
 }
-//test
+
+//
+// for navbars with a row of buttons, use the button-row modifier on navbar and container
+//
+.navbar-button-row {
+  .navbar-fixed-top;
+  top: 50px;
+  margin-bottom: 0px;
+  border-bottom-width: 0px;
+}
+
+.container-button-row {
+  padding-top:80px;
+}
+
+.container-login {
+  padding-top:140px;
+  padding-bottom:80px;
+}
+
+.navbar > .container-fluid {
+  padding-left:0px;
+  padding-right:0px;
+}
+//
+// page layout for left navigation
+//
+.wrapper-leftnav {
+  .make-row();
+}
+
+.content-nav {
+  .make-lg-column(2);
+  .make-md-column(2);
+  .make-sm-column(2);
+  padding-left:0px;
+  padding-right:0px;
+}
+
+.content-main {
+  .make-lg-column(10);
+  .make-md-column(10);
+  .make-sm-column(10);
+}

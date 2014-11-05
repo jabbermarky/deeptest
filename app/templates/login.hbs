@@ -1,0 +1,37 @@
+{{! this page uses a button row in the navbar. modify navbar with navbar-button-row for proper button spacing}}
+<div class="navbar navbar-inverse navbar-button-row">
+    <div class="container-fluid block-grid-row block-color-header">
+        <div class="block block-color-header">
+            <span class="block-line1d">Members, please sign in</span>
+        </div>
+        <div class="block pull-right block-grid-row-last">
+            <span class="block-line1d">forgot password</span>
+        </div>
+    </div>
+</div>
+
+{{! this page uses a button row in the navbar. modify container with navbar-button-row for proper button spacing}}
+<div class='container-fluid container-login'>
+    <div class="row row-login">
+        {{input type="text" value=username size="50" placeholder="Email address"}}
+    </div>
+    <div class="row row-login">
+        {{input type="text" value=password size="50" placeholder="Password"}}
+    </div>
+    <div class="row row-login">
+        <div class="col-sm-2 col-md-2 col-lg-2 col-sm-offset-5 col-md-offset-5 col-lg-offset-5">
+            {{#link-to 'dashboard' classNames="button-new"}}sign in{{/link-to}}
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid block-grid-row block-color-header">
+    <div class="row">
+        <div class="block pull-right block-grid-row-last">
+            <span class="block-line1d">sign up</span>
+        </div>
+        <div class="block block-color-header pull-right">
+            <span class="block-line1d">Not a member?</span>
+        </div>
+    </div>
+</div>

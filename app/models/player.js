@@ -6,6 +6,7 @@ var Player = DS.Model.extend({
   	jerseyNumber: DS.attr(),
   	position:DS.attr(),
     fullName: function() {
+        console.log('playerModel: this is'+this);
     	return this.get('firstName') + ' ' + this.get('lastName');
   	}.property('firstName', 'lastName'),
   	firstInitial: function() {

@@ -1,8 +1,18 @@
+
 body {
   //min-height: 2000px;
-  padding-top: 50px;	// to account for the fixed navbar at the top of the page
+  padding-top: @page-header-height;	// to account for the fixed navbar at the top of the page
 }
 
+.navbar {
+  min-height: @page-header-height;
+  margin-bottom:0px;
+  border-bottom-width: 0px;
+}
+
+.navbar-big {
+  height:90px;
+}
 // Placeholder text
 .myplaceholder(@color: @input-color-placeholder) {
   &::-moz-placeholder {
@@ -22,18 +32,7 @@ body {
     margin-left:5px;
   } // Safari and Chrome
 }
-.row-login {
-  line-height: 25px;
-  margin-top:10px;
-  margin-bottom:10px;
-  .text-center();
-  input {
-    margin-top:10px;
-    margin-bottom:10px;
-    border-color: #4a4a4a;
-    .myplaceholder(#252525);
-  }
-}
+
 .button-new {
 	-webkit-font-smoothing:antialiased;
 	background-color: #4a4a4a;	/*set this with a modifier */
@@ -53,9 +52,9 @@ body {
 	width:100%;
 	word-wrap: break-word;
 	float:left;
-	margin-right:0px;
-    margin-left:0px;
-    margin-top:20px;
+	margin-right:10px;
+    //padding-right:10px;
+    margin-left:10px;
 
   &:hover,
   &:focus {
@@ -63,14 +62,6 @@ body {
     color:#fff;
     text-decoration: none;
   }
-}
-
-.player-row {
-  margin-left: 10px;
-  //display:block;
-  line-height: 24px;
-  font-family: balanceweb,Arial;
-  font-size: 14px;
 }
 
 .block-grid-row {
@@ -115,7 +106,6 @@ body {
 
   height: 80px;                         /* set this with a modifier */
   //width:215px;                        /* set this with a modifier */
-  background-color: rgb(149,149,149);	/* set this with a modifier */
   background-color: #4a4a4a;
   color: #FFF;                          /* set this with a modifier */
   font-size: 28px;                      /* set this with a modifier */
@@ -173,8 +163,8 @@ body {
     margin-right:10px;
     margin-left:10px;
     margin-top:10px;
-    font-size: 20px;
-    line-height:22px;
+    font-size: 14px;
+    line-height:14px;
     display:block;
     font-weight:bold;
   }
@@ -228,15 +218,18 @@ body {
     line-height:20px;
   }
 }
+
 .block-grid1 {
   width:245px;
   min-width: 245px;
   text-align: left;
 }
+
 .block-grid2 {
   width:119px;
   min-width:119px;
 }
+
 .block-center {
   float:none;
 }
@@ -285,21 +278,6 @@ body {
   color: #4888EF;
 }
 
-.row-block {
-  float:left;
-  display:block;
-  height:80px;
-}
-
-.button-header {
-	height:96px;
-	line-height:96px;
-}
-
-.button-altcolor {
-  background-color: #4887EE;
-}
-
 //
 // alternate text colors in inverse navbars
 //
@@ -319,24 +297,22 @@ body {
 //
 .navbar-button-row {
   .navbar-fixed-top;
-  top: 50px;
+  top: @page-header-height;
   margin-bottom: 0px;
   border-bottom-width: 0px;
 }
 
 .container-button-row {
   padding-top:80px;
+  //padding-top:110px;  // with row for Today's date
 }
 
-.container-login {
-  padding-top:140px;
-  padding-bottom:80px;
-}
 
-.navbar > .container-fluid {
+.navbar > .block-grid-row {
   padding-left:0px;
   padding-right:0px;
 }
+
 //
 // page layout for left navigation
 //
@@ -350,6 +326,10 @@ body {
   .make-sm-column(2);
   padding-left:0px;
   padding-right:0px;
+}
+.content-nav > .button-new {
+  margin-left:0px;
+  margin-top:20px;
 }
 
 .content-main {

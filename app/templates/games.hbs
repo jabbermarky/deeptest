@@ -1,8 +1,9 @@
+{{render "header"}}
 {{! this page uses a button row in the navbar. modify navbar with navbar-button-row for proper button spacing}}
-<div class="navbar navbar-inverse navbar-button-row">
+<div class="navbar xnavbar-inverse navbar-button-row">
     <div class="container-fluid block-grid-row block-color-header">
-        <div class="block block-grid-row-first">
-            {{#link-to 'dashboard'}}◀{{/link-to}}
+        <div class="pull-left ">
+            {{#link-to 'dashboard' classNames="button-new block-grid-row-first"}}◀{{/link-to}}
         </div>
         <div class="block block-color-header">
             <span class="block-line1a">line1a</span>
@@ -37,7 +38,7 @@
 {{! this page uses a button row in the navbar. modify container with navbar-button-row for proper button spacing}}
 <div class='container-fluid container-button-row'>
     <div class="wrapper-leftnav" style="height:100%;">
-        <div cass="content-main">
+        <div class="xcontent-main">
                 <h1>Games Template</h1>
         </div>
     </div>

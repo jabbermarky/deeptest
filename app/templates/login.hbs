@@ -1,11 +1,12 @@
+{{render "header"}}
 {{! this page uses a button row in the navbar. modify navbar with navbar-button-row for proper button spacing}}
 <div class="navbar navbar-inverse navbar-button-row">
     <div class="container-fluid block-grid-row block-color-header">
         <div class="block block-color-header">
             <span class="block-line1d">Members, please sign in</span>
         </div>
-        <div class="block pull-right block-grid-row-last">
-            <span class="block-line1d">forgot password</span>
+        <div class="pull-right">
+            {{#link-to 'forgotpassword' classNames="button-new"}}forgot password{{/link-to}}
         </div>
     </div>
 </div>
@@ -26,12 +27,10 @@
 </div>
 
 <div class="container-fluid block-grid-row block-color-header">
-    <div class="row">
-        <div class="block pull-right block-grid-row-last">
-            <span class="block-line1d">sign up</span>
-        </div>
-        <div class="block block-color-header pull-right">
-            <span class="block-line1d">Not a member?</span>
-        </div>
+    <div class="pull-right">
+        {{#link-to 'signup' classNames="button-new"}}sign up{{/link-to}}
+    </div>
+    <div class="block block-color-header pull-right">
+        <span class="block-line1d">Not a member?</span>
     </div>
 </div>

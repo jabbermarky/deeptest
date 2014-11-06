@@ -1,0 +1,136 @@
+//
+// dashboard page specific styles
+//
+
+@dashboard-blue-bg: #0a254e;
+@dashboard-gray-bg: #1c1c1c;
+@dashboard-blue-panel:#0e3779;
+@dashboard-header1:#838383;
+@dashboard-header2:#838383;
+@dashboard-header3:#0e3779;
+@dashboard-header4:#0a2357;
+@dashboard-column1:#838383;
+@dashboard-column2:#838383;
+@dashboard-column3:#305a92;
+@dashboard-column4:#2d4775;
+
+
+.dashboard-color-header1 {
+  background-color: @dashboard-header1;
+  color:#fff;
+}
+
+.dashboard-color-header2 {
+  background-color: @dashboard-header2;
+  color:#fff;
+}
+
+.dashboard-color-header3 {
+  background-color: @dashboard-header3;
+  color:#fff;
+}
+
+.dashboard-color-header4 {
+  background-color: @dashboard-header4;
+  color:#fff;
+}
+
+.dashboard-color-column1 {
+  background-color: @dashboard-column1;
+  color:#fff;
+}
+
+.dashboard-color-column2 {
+  background-color: @dashboard-column2;
+  color:#fff;
+}
+
+.dashboard-color-column3 {
+  background-color: @dashboard-column3;
+  color:#fff;
+}
+
+.dashboard-color-column4 {
+  background-color: @dashboard-column4;
+  color:#fff;
+}
+
+.dashboard-section-nav {
+  .make-lg-column(2);
+  .make-md-column(2);
+  .make-sm-column(2);
+  padding-left:0px;
+  padding-right:0px;
+  background-color: @dashboard-gray-bg;
+  color:#fff;
+  height:100%;
+}
+.dashboard-section-nav > .button-new {
+  margin-left:0px;
+  margin-top:20px;
+}
+.dashboard-section-main {
+  .make-lg-column(7);
+  .make-md-column(7);
+  .make-sm-column(7);
+  margin-top:15px;
+}
+.dashboard-section-right {
+  .make-lg-column(3);
+  .make-md-column(3);
+  .make-sm-column(3);
+  background-color: @dashboard-blue-bg;
+  color:#fff;
+  height:100%;
+}
+
+.dashboard-section-main > .block-grid-row {
+  height:68px;
+}
+
+.dashboard-grid-row {
+  display:block;
+  height:68px;
+  margin-left:0px;
+  margin-right:0px;
+  padding-left:0px;
+  padding-right:0px;
+/*
+  .block-grid-row-last {
+    margin-right:0px;
+  }
+
+  .block-grid-row-first {
+    margin-left:0px;
+  }
+  */
+}
+
+.dashboard-grid-row-separator {
+  height:70px;
+  border-bottom: solid;
+  border-bottom-width: 2px;
+  margin-bottom:10px;
+  padding-bottom:10px;
+  //padding-left:-20px;
+}
+
+.dashboard-grid-cell1 {
+  //width:245px;
+  //min-width: 245px;
+  width:46%;
+  min-width:46%;
+  text-align: left;
+  font-size: 14px;
+  line-height: 14px;
+  height:61px;
+}
+
+.dashboard-grid-cell2 {
+  //width:91px;
+  //min-width:91px;
+  width:16%;
+  min-width:16%;
+  height:61px;
+}
+

@@ -1,7 +1,11 @@
 
 body {
   //min-height: 2000px;
-  padding-top: @page-header-height;	// to account for the fixed navbar at the top of the page
+  padding-top: @page-header-height;	// to account for the fixed navbar at the top of the page;
+}
+
+.container-fluid {
+//  background-color: orange;
 }
 
 .navbar {
@@ -33,16 +37,19 @@ body {
   } // Safari and Chrome
 }
 
-.button-new {
+.button-new() {
 	-webkit-font-smoothing:antialiased;
 	background-color: #4a4a4a;	/*set this with a modifier */
 	box-sizing: border-box;
 	color: #FFF;
 	display:block;
 	font-family:balanceweb, Arial;
-	font-size: 24px;                    /* set this with a modifier */
-	line-height:80px;                   /* set this with a modifier */
-    height: 80px;
+	font-size:24px;                    /* set this with a modifier */
+	font-size:4.8vw;
+    height: 60px;
+    line-height:60px;                   /* set this with a modifier */
+    line-height:12vw;
+    height:12vw;
 	//outline-color:#FFF;
 	//outline-style:none;
 	//outline-width:0px;
@@ -53,8 +60,10 @@ body {
 	word-wrap: break-word;
 	float:left;
 	margin-right:10px;
+    margin-right:1vw;
     //padding-right:10px;
     margin-left:10px;
+    margin-left:1vw;
 
   &:hover,
   &:focus {
@@ -62,27 +71,47 @@ body {
     color:#fff;
     text-decoration: none;
   }
+  @media (min-width: 768px) { //992px, 1200px
+    font-size:24px;                    /* set this with a modifier */
+    line-height:80px;                   /* set this with a modifier */
+    height: 80px;
+  }
+}
+.button-new {
+  .button-new();
+}
+
+@media (min-width: 768px) { //992px, 1200px
+  .button-new {
+    font-size:24px;                    /* set this with a modifier */
+    line-height:80px;                   /* set this with a modifier */
+    height: 80px;
+  }
 }
 
 .block-grid-row {
   display:block;
   height:80px;
+  height:8vw;
 
   .block-grid-row-last {
-    margin-right:0px;
+    margin-right:0;
   }
 
   .block-grid-row-first {
-    margin-left:0px;
+    margin-left:0;
   }
 }
 
 .block-grid-row-separator {
   height:90px;
+  height:9vw;
   border-bottom: solid;
   border-bottom-width: 2px;
   margin-bottom:10px;
+  margin-bottom:1vw;
   padding-bottom:10px;
+  padding-bottom:1vw;
 }
 
 .block {
@@ -102,19 +131,25 @@ body {
   float:left;
   margin-left:5px;
   margin-right:5px;
+  margin-left:.5vw;
+  margin-right:.5vw;
   position:relative;
 
   height: 80px;                         /* set this with a modifier */
+  //height: 16vw;
   //width:215px;                        /* set this with a modifier */
   background-color: #4a4a4a;
   color: #FFF;                          /* set this with a modifier */
   font-size: 28px;                      /* set this with a modifier */
   line-height:80px;                     /* set this with a modifier */
+  //line-height:8vw;
   span {
     //margin-right:10px;
     //margin-left:10px;
     padding-left:5px;
     padding-right:5px;
+    padding-left:.5vw;
+    padding-right:.5vw;
   }
   a {
     color:#fff;
@@ -162,11 +197,33 @@ body {
   .block-grid-header {
     margin-right:10px;
     margin-left:10px;
+    margin-right:.5vw;
+    margin-left:.5vw;
     margin-top:10px;
+    margin-top:1vw;
     font-size: 14px;
     line-height:14px;
+    font-size:2.8vw;
+    line-height:2.8vw;
     display:block;
     font-weight:bold;
+  }
+  @media (min-width: 768px) {
+    .block-grid-header {
+      font-size:13px;                    /* set this with a modifier */
+      font-size:1.5vw;
+      line-height:14px;                   /* set this with a modifier */
+      line-height:1.55vw;
+      color:orange;
+    }
+  }
+  @media (min-width: 992px) {
+    .button-new {
+    }
+  }
+  @media (min-width: 1200px) {
+    .button-new {
+    }
   }
   .block-line1b {
     margin-left:10px;

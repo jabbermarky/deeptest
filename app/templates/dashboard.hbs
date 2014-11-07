@@ -2,32 +2,60 @@
 {{! this page uses a button row in the navbar. modify navbar with navbar-button-row for proper button spacing}}
 
 {{! this page uses a button row in the navbar. modify container with navbar-button-row for proper button spacing}}
-<div class='container-fluid' style="height:500px;">
-    <div class="wrapper-leftnav" style="height:100%;">
-        <div class="dashboard-section-nav" style="height:100%;">
-            {{#link-to 'players' classNames="button-new"}}players{{/link-to}}
-            {{#link-to 'games' classNames="button-new"}}games{{/link-to}}
-            {{#link-to 'reports' classNames="button-new"}}reports{{/link-to}}
-            {{#link-to 'admin' classNames="button-new"}}admin{{/link-to}}
-        </div>
-        <div class="dashboard-section-main">
-            <div class="dashboard-grid-row dashboard-grid-row-separator">
-                <div class="block dashboard-grid-cell1 dashboard-color-header1 block-grid-row-first" style="margin-left:0;">
-                    <span class="block-grid-header">Top Ten Overall Performers</span>
-                </div>
-                <div class="block dashboard-color-header2 dashboard-grid-cell2">
-                    <span class="block-grid-header">Position</span>
-                </div>
-                <div class="block dashboard-color-header3 dashboard-grid-cell2">
-                    <span class="block-grid-header">Last Game</span>
-                </div>
-                <div class="block dashboard-color-header4 dashboard-grid-cell2 block-grid-row-last" style="margin-right:0;">
-                    <span class="block-grid-header">Season Avg</span>
-                </div>
+<div class='container-fluid dashboard'>
+    <div class="section-nav">
+        {{#link-to 'players'}}players{{/link-to}}
+        {{#link-to 'games'}}games{{/link-to}}
+        {{#link-to 'reports'}}reports{{/link-to}}
+        {{#link-to 'admin'}}admin{{/link-to}}
+    </div>
+    <div class="section-main">
+        <div class="grid-row">
+            <div class="grid-cell1 dashboard-color-header1 ">
+                <span class="grid-header">Top Ten Overall Performers</span>
+            </div>
+            <div class="grid-col-separator"></div>
+            <div class="grid-cell2 dashboard-color-header2 ">
+                <span class="grid-header">Position</span>
+            </div>
+            <div class="grid-col-separator"></div>
+            <div class="grid-cell3 dashboard-color-header3 ">
+                <span class="grid-header">Last Game</span>
+            </div>
+            <div class="grid-col-separator"></div>
+            <div class="grid-cell4 dashboard-color-header4 ">
+                <span class="grid-header">Season Avg</span>
             </div>
         </div>
-        <div class="dashboard-section-right">
-            <h1>Top New Players</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="th1">Top Ten Overall Performers</th>
+                    <th class="th2">Position</th>
+                    <th class="th3">Last Game</th>
+                    <th class="th4">Season Avg</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="td1">1) Manning, A.</td>
+                    <td class="td2">OLB</td>
+                    <td class="td3">100%</td>
+                    <td class="td4">95%</td>
+                </tr>
+                <tr>
+                    <td class="td1">{{rank}}) {{name}}</td>
+                    <td class="td2">{{position}}</td>
+                    <td class="td3">{{lastGameScore}}</td>
+                    <td class="td4">{{seasonAverageScore}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section-right">
+        <div class="block dashboard-color-header4 ">
+            <span class="grid-header">Top New Players</span>
         </div>
     </div>
 </div>

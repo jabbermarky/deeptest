@@ -19,15 +19,15 @@ Both of these will look for a series of objects who’s names start with UserNew
 
 Router.map(function() {
     this.route('index',    { path: '/' });
-    this.route('login');
-    this.route('signup');
+    this.route('login',    { path: '/login'});
+    this.route('signup',   { path: '/signup'});
     this.route('forgotpassword');
-	this.resource('dashboard',{ path: '/dashboard' });
-	this.resource("players",  { path: '/players' });
-	this.resource('player',   { path: '/player/:player_id' });
-	this.resource("games",    { path: '/games' });
-	this.resource("reports",  { path: '/reports' });
-	this.resource("admin",    { path: '/admin' });
+	this.route('dashboard', { path: '/dashboard'});
+	this.route("players",   { path: '/players' });
+	this.resource('player', { path: '/player/:player_id' });
+	this.route("games",     { path: '/games' });
+	this.route("reports",   { path: '/reports' });
+	this.route("admin",     { path: '/admin' });
 });
 
 export default Router;

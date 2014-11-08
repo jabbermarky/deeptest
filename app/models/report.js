@@ -10,8 +10,8 @@ Report.reopenClass({
         {
             id: 1,
             name: "Report 1",
-            description: "blah",
-        },
+            description: "blah"
+        }
     ]
 });
 

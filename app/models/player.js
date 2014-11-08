@@ -29,28 +29,28 @@ Player.reopenClass({
             firstName: "Bill",
             lastName: "Passer",
             jerseyNumber: "1",
-            position: "QB",
+            position: "QB"
         },
         {
             id: 2,
             firstName: "Football",
             lastName: "Kicker",
             jerseyNumber: "2",
-            position: "K",
+            position: "K"
         },
         {
             id: 3,
             firstName: "Thierry",
             lastName: "Punter",
             jerseyNumber: "3",
-            position: "P",
+            position: "P"
         },
         {
             id: 4,
             firstName: "Wally",
             lastName: "Holder",
             jerseyNumber: "4",
-            position: "C",
+            position: "C"
         }
     ]
 });

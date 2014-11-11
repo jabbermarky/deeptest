@@ -1,0 +1,30 @@
+<!--div>
+    <h3>{{!caption}}</h3>
+    {{!#each top5}}
+        <p>{{!shortNameInitialLast}}</p>
+    {{!/each}}
+</div-->
+
+<div class="dashboard-blue-panel">
+<h4>{{caption}}</h4>
+<table class="table top5">
+    <thead>
+    <tr>
+        <th class="th1">Player</th>
+        <th class="th2">Gr / Gm</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each top5}}
+        {{#link-to "player" this tagName="tr"}}
+            <td class="td1">{{#link-to "player" this}}{{shortNameInitialLast}} / {{position}}{{/link-to}}</td>
+            <td class="td2">{{seasonAvgGrade}} / {{seasonNumGames}}</td>
+        {{/link-to}}
+    {{else}}
+        <tr>
+            <td>no players...</td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
+</div>

@@ -28,6 +28,7 @@ Router.map(function() {
 	this.route("games",     { path: '/games' });
 	this.route("reports",   { path: '/reports' });
 	this.route("admin",     { path: '/admin' });
+  this.route('dashboard/topNewPlayers');
 });
 
 export default Router;

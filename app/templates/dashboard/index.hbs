@@ -1,0 +1,54 @@
+<!--div class="grid-row">
+    <div class="grid-cell1 dashboard-color-header1 ">
+        <span class="grid-header">Top Ten Overall Performers</span>
+    </div>
+    <div class="grid-col-separator"></div>
+    <div class="grid-cell2 dashboard-color-header2 ">
+        <span class="grid-header">Position</span>
+    </div>
+    <div class="grid-col-separator"></div>
+    <div class="grid-cell3 dashboard-color-header3 ">
+        <span class="grid-header">Last Game</span>
+    </div>
+    <div class="grid-col-separator"></div>
+    <div class="grid-cell4 dashboard-color-header4 ">
+        <span class="grid-header">Season Avg</span>
+    </div>
+</div-->
+<table class="table top10">
+    <thead>
+    <tr>
+        <th class="th1">Top Ten Overall Performers</th>
+        <th class="th2">Position</th>
+        <th class="th3">Last Game</th>
+        <th class="th4">Season Avg</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each top10}}
+        {{#link-to "player" this tagName="tr"}}
+            <td class="td1">{{#link-to "player" this}}{{shortNameInitialLast}}{{/link-to}}</td>
+            <!--td>#{{jerseyNumber}}</td-->
+            <td class="td2">{{position}}</td>
+            <td class="td3"><div class="table-div">{{lastGameAvgGrade}}<span class="table-badge">{{lastGameNumPlays}}</span></div></td>
+            <td class="td4"><div class="table-div">{{seasonAvgGrade}}<span class="table-badge">{{seasonNumPlays}}</span></div></td>
+        {{/link-to}}
+    {{else}}
+        <tr>
+            <td>no players...</td>
+        </tr>
+    {{/each}}
+    <!--tr>
+                    <td class="td1">1) Manning, A.</td>
+                    <td class="td2">OLB</td>
+                    <td class="td3">100%</td>
+                    <td class="td4">95%</td>
+                </tr>
+                <tr>
+                    <td class="td1">{{rank}}) {{name}}</td>
+                    <td class="td2">{{position}}</td>
+                    <td class="td3">{{lastGameScore}}</td>
+                    <td class="td4">{{seasonAverageScore}}</td>
+                </tr-->
+    </tbody>
+</table>

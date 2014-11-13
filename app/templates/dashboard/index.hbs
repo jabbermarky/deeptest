@@ -25,13 +25,13 @@
     </tr>
     </thead>
     <tbody>
-    {{#each top10}}
-        {{#link-to "player" this tagName="tr"}}
-            <td class="td1">{{#link-to "player" this}}{{shortNameInitialLast}}{{/link-to}}</td>
-            <!--td>#{{jerseyNumber}}</td-->
-            <td class="td2">{{position}}</td>
-            <td class="td3"><div class="table-div">{{lastGameAvgGrade}}<span class="table-badge">{{lastGameNumPlays}}</span></div></td>
-            <td class="td4"><div class="table-div">{{seasonAvgGrade}}<span class="table-badge">{{seasonNumPlays}}</span></div></td>
+    {{#each item in filteredContent itemController='dashboard/filteredContentItem'}}
+        {{#link-to "player" item tagName="tr"}}
+            <td class="td1">{{item.index}}) {{#link-to "player" item}}{{item.shortNameInitialLast}}{{/link-to}}</td>
+            <!--td>#{{item.jerseyNumber}}</td-->
+            <td class="td2">{{item.position}}</td>
+            <td class="td3"><div class="table-div">{{item.lastGameAvgGrade}}<span class="table-badge">{{item.lastGameNumPlays}}</span></div></td>
+            <td class="td4"><div class="table-div">{{item.seasonAvgGrade}}<span class="table-badge">{{item.seasonNumPlays}}</span></div></td>
         {{/link-to}}
     {{else}}
         <tr>

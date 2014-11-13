@@ -1,16 +1,11 @@
 import Ember from 'ember';
 
-export default Ember.Route.extend({/*
+export default Ember.Route.extend({
     renderTemplate: function() {
+        console.log('dashboard/index route()');
         this.render();
-        this.render('dashboard/index', {                 // the template to render
-            into: 'dashboard',                          // the template to render into
-            outlet: 'main',                  // the name of the outlet in that template
-            //controller:'dashboard/top-ten-overall-performers',
-            model:this.store.find('player')
-        });
-    },
-
+    }
+/*
     actions: {
         didTransition: function() {
             var header = this.controllerFor('header');

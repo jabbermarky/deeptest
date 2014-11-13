@@ -69,10 +69,10 @@ SeasonStat.reopenClass({
                 "player": 4
             },
             {
-                "overallGrade": 82,
-                "mainCat3Grade": 81,
-                "mainCat2Grade": 82,
-                "mainCat1Grade": 84,
+                "overallGrade": 62,
+                "mainCat3Grade": 61,
+                "mainCat2Grade": 62,
+                "mainCat1Grade": 64,
                 "numPlays": 34,
                 "id": 506,
                 "gameDate": "9/6/2014",
@@ -1246,10 +1246,10 @@ SeasonStat.reopenClass({
                 "player": 2
             },
             {
-                "overallGrade": 94,
-                "mainCat3Grade": 105,
-                "mainCat2Grade": 89,
-                "mainCat1Grade": 89,
+                "overallGrade": 74,
+                "mainCat3Grade": 85,
+                "mainCat2Grade": 69,
+                "mainCat1Grade": 69,
                 "numPlays": 27,
                 "id": 305,
                 "gameDate": "8/29/2014",
@@ -1258,10 +1258,10 @@ SeasonStat.reopenClass({
                 "player": 3
             },
             {
-                "overallGrade": 91,
-                "mainCat3Grade": 94,
-                "mainCat2Grade": 87,
-                "mainCat1Grade": 92,
+                "overallGrade": 71,
+                "mainCat3Grade": 74,
+                "mainCat2Grade": 67,
+                "mainCat1Grade": 72,
                 "numPlays": 42,
                 "id": 405,
                 "gameDate": "8/29/2014",
@@ -1270,10 +1270,10 @@ SeasonStat.reopenClass({
                 "player": 4
             },
             {
-                "overallGrade": 96,
-                "mainCat3Grade": 98,
-                "mainCat2Grade": 99,
-                "mainCat1Grade": 92,
+                "overallGrade": 76,
+                "mainCat3Grade": 78,
+                "mainCat2Grade": 79,
+                "mainCat1Grade": 72,
                 "numPlays": 24,
                 "id": 505,
                 "gameDate": "8/29/2014",
@@ -2471,10 +2471,10 @@ SeasonStat.reopenClass({
                 "player": 4
             },
             {
-                "overallGrade": 92,
-                "mainCat3Grade": 81,
-                "mainCat2Grade": 105,
-                "mainCat1Grade": 89,
+                "overallGrade": 72,
+                "mainCat3Grade": 61,
+                "mainCat2Grade": 85,
+                "mainCat1Grade": 69,
                 "numPlays": 67,
                 "id": 504,
                 "gameDate": "8/22/2014",
@@ -4873,10 +4873,10 @@ SeasonStat.reopenClass({
                 "player": 4
             },
             {
-                "overallGrade": 88,
-                "mainCat3Grade": 93,
-                "mainCat2Grade": 85,
-                "mainCat1Grade": 85,
+                "overallGrade": 68,
+                "mainCat3Grade": 73,
+                "mainCat2Grade": 65,
+                "mainCat1Grade": 65,
                 "numPlays": 52,
                 "id": 502,
                 "gameDate": "8/8/2014",
@@ -6074,10 +6074,10 @@ SeasonStat.reopenClass({
                 "player": 4
             },
             {
-                "overallGrade": 100,
-                "mainCat3Grade": 105,
-                "mainCat2Grade": 99,
-                "mainCat1Grade": 95,
+                "overallGrade": 80,
+                "mainCat3Grade": 85,
+                "mainCat2Grade": 79,
+                "mainCat1Grade": 75,
                 "numPlays": 61,
                 "id": 501,
                 "gameDate": "8/1/2014",

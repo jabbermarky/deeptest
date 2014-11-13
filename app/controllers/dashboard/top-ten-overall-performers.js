@@ -3,10 +3,9 @@ import Ember from 'ember';
 export default Ember.ArrayController.extend({
     sortProperties: ['seasonAvgGrade'],
     sortAscending: false,
-
     caption:'Top Ten Overall Performers',
-    top10: function() {
-        return this.get('arrangedContent').toArray().slice(0,10);
+    filteredContent: function() {
+        return this.get('arrangedContent').slice(0,10);
     }.property('arrangedContent.[]')
 });
 /*

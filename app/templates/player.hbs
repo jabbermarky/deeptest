@@ -6,7 +6,7 @@
             {{#link-to 'dashboard'}}◀︎{{/link-to}}
         </div>
         <div class="block block-color-header">
-            <span class="block-line1a">{{fullName}} &nbsp; #{{jerseyNumber}} / schoolClass </span>
+            <span class="block-line1a">{{fullName}} &nbsp; #{{jerseyNumber}} / {{classYear}} </span>
             <span class="block-line2a">Team Name</span>
         </div>
         <div class="block block-active pull-right block-grid-row-last">
@@ -15,8 +15,8 @@
         </div>
         <div class="block pull-right">
             <span class="block-line1">Avg Game Gr</span>
-            <span class="block-line2">94%</span>
-            <span class="block-badge">265</span>
+            <span class="block-line2">{{seasonAvgGrade}}%</span>
+            <span class="block-badge">{{seasonNumGames}}</span>
         </div>
         <div class="block pull-right">
             <span>{{position}}</span>

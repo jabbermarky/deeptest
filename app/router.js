@@ -22,13 +22,15 @@ Router.map(function() {
     this.route('login',    { path: '/login'});
     this.route('signup',   { path: '/signup'});
     this.route('forgotpassword');
-	this.route('dashboard', { path: '/dashboard'});
-	this.route("players",   { path: '/players' });
-	this.resource('player', { path: '/player/:player_id' });
-	this.route("games",     { path: '/games' });
-	this.route("reports",   { path: '/reports' });
-	this.route("admin",     { path: '/admin' });
-  this.resource('about', function() {
+	  this.route('dashboard', { path: '/dashboard'});
+	  this.route("players",   { path: '/players' });
+	  this.resource('player', { path: '/player/:player_id' });
+	  this.route("games",     { path: '/games' });
+	  this.route("reports",   { path: '/reports' });
+	  this.route("admin",     { path: '/admin' });
+    this.route('dashboard/topNewPlayers');
+
+    this.resource('about', function() {
     this.route('location');
     this.route('product');
   });

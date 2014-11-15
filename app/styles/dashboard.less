@@ -15,6 +15,16 @@
 @dashboard-column4:#2d4775;
 
 
+.dashboard-blue-panel {
+  background-color: @dashboard-blue-panel;
+  color:#fff;
+  padding-left:10px;
+  padding-right:15px;
+  padding-top:5px;
+  //padding-bottom:5px;
+  margin-bottom: 15px;
+}
+
 .dashboard-color-header1 {
   background-color: @dashboard-header1;
   color:#fff;
@@ -99,8 +109,8 @@
   .make-lg-column(7);
   .make-md-column(7);
   .make-sm-column(7);
-  padding-top:15px;
-  height:calc(100% - 15px);
+  padding-top:5px;
+  height:calc(100% - 5px);
   height:100%;
 }
 
@@ -111,6 +121,9 @@
   background-color: @dashboard-blue-bg;
   color:#fff;
   height:100%;
+  padding-top:15px;
+  padding-left:0;
+  padding-right:0;
 }
 
 .section-main > .block-grid-row {
@@ -251,7 +264,7 @@
   }
 }
 
-.dashboard td {
+.dashboard .top10 td {
   font-size: 14px;
   font-size:2.8vw;
   font-weight:normal;
@@ -264,31 +277,34 @@
   height:40px;
   text-align:center;
 }
-.dashboard tbody, tr, td {
+.dashboard .top10 tbody,
+.dashboard .top10 tr,
+.dashboard .top10 td {
   border-top:10px solid white;
   border-bottom:5px solid white;
   vertical-align: center;
+  a {
+    color:#fff;
+  }
 }
-.dashboard .td1 {
+.dashboard .top10 .td1 {
   .dashboard-color-column1;
   border-right:5px solid white;
   text-align: left;
 }
-.dashboard .td2 {
+.dashboard .top10 .td2 {
   .dashboard-color-column2;
   border-right:5px solid white;
 }
-.dashboard .td3 {
+.dashboard .top10 .td3 {
   .dashboard-color-column3;
   border-right:5px solid white;
 }
-.dashboard .td4 {
+.dashboard .top10 .td4 {
   .dashboard-color-column4;
   border-right:0;
 }
-.dashboard thead {
-}
-.dashboard th {
+.dashboard .top10 th {
   font-size: 14px;
   //line-height:14px;
   font-size:2.8vw;
@@ -304,25 +320,102 @@
   border-right: 5px solid white;
   text-align:center;
 }
-.dashboard .th1 {
+.dashboard .top10 .th1 {
   .dashboard-color-header1;
   width:49%;
   text-align:left;
   vertical-align: top;
 }
-.dashboard .th2 {
+.dashboard .top10 .th2 {
   .dashboard-color-header2;
   width:17%;
   vertical-align: top;
 }
-.dashboard .th3 {
+.dashboard .top10 .th3 {
   .dashboard-color-header3;
   width:17%;
   vertical-align: top;
 }
-.dashboard .th4 {
+.dashboard .top10 .th4 {
   .dashboard-color-header4;
   width:17%;
   vertical-align: top;
   border-right: 0;
+}
+
+.dashboard .top5 th {
+  padding:5px 0;
+  font-size: 15px;
+  line-height:20px;
+  //font-size:2.6vw;
+  //line-height:2.8vw;
+  font-weight:normal;
+  @media (min-width: 768px) {
+    font-size:13px;                    /* set this with a modifier */
+  //  font-size:1.2vw;
+    line-height:14px;                   /* set this with a modifier */
+  //  line-height:1.35vw;
+  }
+  height:20px;
+  border-bottom: 1px solid white;
+  text-align:left;
+}
+.dashboard .top5 .th1 {
+  //.dashboard-color-header1;
+  width:75%;
+  text-align:left;
+  vertical-align: center;
+}
+.dashboard .top5 .th2 {
+  //.dashboard-color-header2;
+  width:25%;
+  vertical-align: center;
+  text-align: right;
+}
+
+.dashboard .top5 td {
+  padding:3px 0;
+  font-size: 14px;
+//  font-size:2.4vw;
+  line-height:14px;                   /* set this with a modifier */
+  font-weight:normal;
+  @media (min-width: 768px) {
+    font-size:13px;                    /* set this with a modifier */
+//    font-size:1.1vw;
+    line-height:14px;                   /* set this with a modifier */
+//    line-height:1.25vw;
+  }
+  height:16px;
+  text-align:left;
+}
+.dashboard .top5 tbody,
+.dashboard .top5 tr,
+.dashboard .top5 td {
+  border-top:0;
+  border-bottom:0;
+  vertical-align: center;
+  a {
+    color:#fff;
+  }
+}
+.dashboard .top5 .td1 {
+}
+.dashboard .top5 .td2 {
+  text-align: right;
+}
+
+.table-div {
+  position:relative;
+}
+
+.table-badge {
+  position:absolute;
+  bottom:0px;
+  right:0px;
+  font-size: 11px;
+  line-height:11px;
+  display: inline-block;
+  padding: 0;
+  margin:-5px;
+  white-space: nowrap;
 }

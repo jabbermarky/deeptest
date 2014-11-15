@@ -52,3 +52,54 @@
                 </tr-->
     </tbody>
 </table>
+
+<section>
+        <span>id,</span>
+        <span>player,</span>
+        <span>season,</span>
+        <span>numPlays,</span>
+        <span>numGames,</span>
+        <span>mainCat1Grade,</span>
+        <span>mainCat2Grade,</span>
+        <span>mainCat3Grade,</span>
+        <span>overallGrade</span>
+
+    <br>
+    {{#each item in controller}}
+            <span>{{item.id}},</span>
+            <span>{{item.id}},</span>
+            <span>2014,</span>
+            <span>{{item.seasonNumPlays}},</span>
+            <span>{{item.seasonNumGames}},</span>
+            <span>{{item.seasonAvgCat1Grade}},</span>
+            <span>{{item.seasonAvgCat2Grade}},</span>
+            <span>{{item.seasonAvgCat3Grade}},</span>
+            <span>{{item.seasonAvgGrade}}</span>
+        <br>
+    {{/each}}
+</section>
+
+<section>
+    <span>player,</span>
+    <span>season,</span>
+    <span>numPlays,</span>
+    <span>numGames,</span>
+    <span>mainCat1Grade,</span>
+    <span>mainCat2Grade,</span>
+    <span>mainCat3Grade,</span>
+    <span>overallGrade</span>
+
+    <br>
+    {{!debugger}}
+    {{!#each item in seasonTopPerformers}}
+        <span>{{!item.player.fullName}},</span>
+        <span>{{!item.season}},</span>
+        <span>{{!item.numPlays}},</span>
+        <span>{{!item.numGames}},</span>
+        <span>{{!item.mainCat1Grade}},</span>
+        <span>{{!item.mainCat2Grade}},</span>
+        <span>{{!item.mainCat3Grade}},</span>
+        <span>{{!item.overallGrade}}</span>
+        <br>
+    {{!/each}}
+</section>

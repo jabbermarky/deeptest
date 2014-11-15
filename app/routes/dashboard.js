@@ -19,6 +19,23 @@ export default Ember.Route.extend({
     }.property(),
 
     renderTemplate: function() {
+        var newPlayerFilter = this.store.filter('player', function(player){
+            return player.get('isNewPlayer');
+        });
+        var veteranPlayerFilter = this.store.filter('player', function(player){
+            return !player.get('isNewPlayer');
+        });
+
+
+/*
+        this.store.find('player', filter).then(function(players) {
+            players = Ember.ArrayProxy.extend(Ember.SortableMixin).create(players);
+            return players.set('sortProperties', ['seasonAvgGrade']);
+        });
+*/
+
+
+
         this.render();
         this.render('dashboard/index', {                 // the template to render
             into: 'dashboard',                          // the template to render into
@@ -30,8 +47,8 @@ export default Ember.Route.extend({
             into: 'dashboard',                          // the template to render into
             outlet: 'top-new-players',                  // the name of the outlet in that template
             controller:'dashboard/top-new-players',
-            //model:this.get('players')
-            model:this.get('newPlayers')
+            //model:this.get('newPlayers')
+            model:newPlayerFilter
 
         });
         this.render('dashboard/top5', {                 // the template to render
@@ -44,8 +61,8 @@ export default Ember.Route.extend({
             into: 'dashboard',                          // the template to render into
             outlet: 'veteran-watch-list',               // the name of the outlet in that template
             controller: 'dashboard/veteran-watch-list',  // the name of the outlet in that template
-            //model:this.get('players')
-            model:this.get('veteranPlayers')
+//            model:this.get('veteranPlayers')
+            model:veteranPlayerFilter
         });
     },
 

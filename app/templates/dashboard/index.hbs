@@ -111,8 +111,8 @@
     <tbody>
     {{#each item in seasonTop10Performers itemController='dashboard/topItem'}}
         {{#link-to "player" item.player tagName="tr"}}
-            <td class="td1">{{item.index}}) {{#link-to "player" item.player}}{{item.player.shortNameInitialLast}}{{/link-to}}</td>
-            {{!item.player.jerseyNumber}}
+            <td class="td1"><div class="table-div">{{item.index}}) {{#link-to "player" item.player}}{{item.player.shortNameInitialLast}}<span class="table-jersey-badge">{{item.player.jerseyNumber}}</span>{{/link-to}}</div></td>
+
             <td class="td2">{{item.player.position}}</td>
             <td class="td3"><div class="table-div">{{item.player.lastGameAvgGrade}}<span class="table-badge">{{item.player.lastGameNumPlays}}</span></div></td>
             <td class="td4"><div class="table-div">{{item.overallGrade}}<span class="table-badge">{{item.numPlays}}</span></div></td>

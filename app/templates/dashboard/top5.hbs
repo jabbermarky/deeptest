@@ -18,7 +18,7 @@
     {{#each filteredContent}}
         {{#link-to "player" this tagName="tr"}}
             <td class="td1">{{#link-to "player" this}}{{shortNameInitialLast}} / {{position}}{{/link-to}}</td>
-            <td class="td2">{{seasonAvgGrade}} / {{seasonNumGames}}</td>
+            <td class="td2">{{seasonAvgGrade}}% / {{seasonNumGames}}</td>
         {{/link-to}}
     {{else}}
         <tr>

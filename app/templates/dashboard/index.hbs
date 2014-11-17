@@ -114,8 +114,8 @@
             <td class="td1"><div class="table-div">{{item.index}}) {{#link-to "player" item.player}}{{item.player.shortNameInitialLast}}<span class="table-jersey-badge">{{item.player.jerseyNumber}}</span>{{/link-to}}</div></td>
 
             <td class="td2">{{item.player.position}}</td>
-            <td class="td3"><div class="table-div">{{item.player.lastGameAvgGrade}}<span class="table-badge">{{item.player.lastGameNumPlays}}</span></div></td>
-            <td class="td4"><div class="table-div">{{item.overallGrade}}<span class="table-badge">{{item.numPlays}}</span></div></td>
+            <td class="td3"><div class="table-div">{{item.player.lastGameAvgGrade}}%<span class="table-badge">{{item.player.lastGameNumPlays}}</span></div></td>
+            <td class="td4"><div class="table-div">{{item.overallGrade}}%<span class="table-badge">{{item.numPlays}}</span></div></td>
         {{/link-to}}
     {{else}}
         <tr>

@@ -6,15 +6,11 @@ export default Ember.ArrayController.extend({
     caption:'Top Ten Overall Performers',
 
     //<<< this works
-    seasonStats:function() {
-        return this.store.find('seasonStat');
-    }.property(),
-    //>>>
-
-    //<<< this works
     sortedSeasonStats: function() {
         var self = this;
-        var resp = Ember.ArrayProxy.extend(Ember.SortableMixin).create({ content: Ember.A([]) });
+        var resp = Ember.ArrayProxy.extend(Ember.SortableMixin).create({
+            content: Ember.A([])
+        });
         resp.set('sortAscending',false);
         resp.set('sortProperties', ['overallGrade']);
         self.get('seasonStats').then(function (stats){
@@ -25,9 +21,17 @@ export default Ember.ArrayController.extend({
     //>>>
 
     //<<< this works
+    seasonStats:function() {
+        return this.store.find('seasonStat');
+    }.property(),
+    //>>>
+
+    //<<< this works
     seasonTop10Performers :function() {
         var self = this;
-        var resp = Ember.ArrayProxy.extend(Ember.SortableMixin).create({ content: self.get('seasonStats') });
+        var resp = Ember.ArrayProxy.extend(Ember.SortableMixin).create({
+            content: self.get('seasonStats')
+        });
         resp.set('sortAscending',false);
         resp.set('sortProperties', ['overallGrade']);
         return resp.slice(0,10);

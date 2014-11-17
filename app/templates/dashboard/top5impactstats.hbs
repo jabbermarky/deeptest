@@ -1,0 +1,29 @@
+<div class="dashboard-blue-panel">
+<h4>{{caption}}</h4>
+<table class="table top5">
+    <thead>
+    <tr>
+        <th class="th1">Player</th>
+        <th class="th2">Gr / Gm</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each filteredContent}}
+        {{#link-to "player"  player tagName="tr"}}
+            <td class="td1">
+                {{#link-to "player" player}}
+                    {{player.shortNameInitialLast}} / {{player.position}} / {{player.classYr}}
+                {{/link-to}}
+            </td>
+            <td class="td2">
+                {{unitImpactGrade}}% / {{numGames}}
+            </td>
+        {{/link-to}}
+    {{else}}
+        <tr>
+            <td>no players...</td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
+</div>

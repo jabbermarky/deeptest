@@ -11,7 +11,7 @@ var Player = DS.Model.extend({
     firstName: attr(),      //    [Player_First_Name] [varchar](100) NULL,
     middleName: attr(),     //    [Player_Middle_Name] [varchar](100) NULL,
     lastName: attr(),       //    [Player_Last_Name] [varchar](100) NULL,
-    //preferredName: attr(),  //    [Player_Preferred_Name] [varchar](100) NULL,
+    //preferredName: attr(),  //  [Player_Preferred_Name] [varchar](100) NULL,
     position: attr(),
     jerseyNumber: attr(),   //    [Player_Jersey_No] [varchar](2) NULL,
     classYear: attr(),   //    [Player_Class] [varchar](10) NULL,
@@ -44,6 +44,13 @@ var Player = DS.Model.extend({
     seasonStats: hasMany('seasonStat',{async:true}),
 
     gameStats: hasMany('gameStat',{async:true}),
+
+    classYr: function() {
+        if (this.get('classYear') === 'Freshman') return 'FR';
+        if (this.get('classYear') === 'Sophomore') return 'SO';
+        if (this.get('classYear') === 'Junior') return 'JR';
+        if (this.get('classYear') === 'Senior') return 'SR';
+    }.property('classYear'),
 
     currentSeasonStats: function() {
         var seasonStats = this.get('seasonStats');
@@ -94,6 +101,34 @@ var Player = DS.Model.extend({
         var avg = 0;
         stats.forEach(function(item) {
             sum += item.get('overallGrade');
+        });
+        if (length) {
+            avg = Math.ceil(sum / length);
+        }
+        return avg;
+    }.property('gameStats.length'),
+
+    seasonAvgBonusGrade: function() {
+        var stats = this.get('gameStats');
+        var length = this.get('gameStats.length');
+        var sum = 0;
+        var avg = 0;
+        stats.forEach(function(item) {
+            sum += item.get('bonusGrade');
+        });
+        if (length) {
+            avg = Math.ceil(sum / length);
+        }
+        return avg;
+    }.property('gameStats.length'),
+
+    seasonAvgUnitImpactGrade: function() {
+        var stats = this.get('gameStats');
+        var length = this.get('gameStats.length');
+        var sum = 0;
+        var avg = 0;
+        stats.forEach(function(item) {
+            sum += item.get('unitImpactGrade');
         });
         if (length) {
             avg = Math.ceil(sum / length);

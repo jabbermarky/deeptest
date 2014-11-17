@@ -44,33 +44,40 @@
 --}}
 
 {{!--
-<!--section>
+<section>
         <span>id,</span>
         <span>player,</span>
+        <span>fullName</span>
+        <span>class</span>
         <span>season,</span>
         <span>numPlays,</span>
         <span>numGames,</span>
+        <span>bonusGrade,</span>
+        <span>unitImpactGrade,</span>
         <span>mainCat1Grade,</span>
         <span>mainCat2Grade,</span>
         <span>mainCat3Grade,</span>
         <span>overallGrade</span>
 
     <br>
-    {{!#each item in controller}}
-            <span>{{!item.id}},</span>
-            <span>{{!item.id}},</span>
+    {{#each item in controller}}
+            <span>{{item.id}},</span>
+            <span>{{item.id}},</span>
+            <span>{{item.fullName}},</span>
+            <span>{{item.classYear}},</span>
             <span>2014,</span>
-            <span>{{!item.seasonNumPlays}},</span>
-            <span>{{!item.seasonNumGames}},</span>
-            <span>{{!item.seasonAvgCat1Grade}},</span>
-            <span>{{!item.seasonAvgCat2Grade}},</span>
-            <span>{{!item.seasonAvgCat3Grade}},</span>
-            <span>{{!item.seasonAvgGrade}}</span>
+            <span>{{item.seasonNumPlays}},</span>
+            <span>{{item.seasonNumGames}},</span>
+            <span>{{item.seasonAvgBonusGrade}},</span>
+            <span>{{item.seasonAvgUnitImpactGrade}},</span>
+            <span>{{item.seasonAvgCat1Grade}},</span>
+            <span>{{item.seasonAvgCat2Grade}},</span>
+            <span>{{item.seasonAvgCat3Grade}},</span>
+            <span>{{item.seasonAvgGrade}}</span>
         <br>
-    {{!/each}}
-</section-->
+    {{/each}}
+</section>
 --}}
-
 {{!--
 <section>
     <h2>seasonTopPerformers</h2>

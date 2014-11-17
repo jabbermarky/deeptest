@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
     caption:'Top New Players',
-    sortProperties: ['seasonAvgGrade'],
+    sortProperties: ['overallGrade'],
     sortAscending: false,
     filteredContent: function() {
         return this.get('arrangedContent').slice(0,5);

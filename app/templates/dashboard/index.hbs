@@ -15,6 +15,7 @@
         <span class="grid-header">Season Avg</span>
     </div>
 </div-->
+{{!--
 <table class="table top10">
     <thead>
     <tr>
@@ -38,22 +39,12 @@
             <td>no players...</td>
         </tr>
     {{/each}}
-    <!--tr>
-                    <td class="td1">1) Manning, A.</td>
-                    <td class="td2">OLB</td>
-                    <td class="td3">100%</td>
-                    <td class="td4">95%</td>
-                </tr>
-                <tr>
-                    <td class="td1">{{rank}}) {{name}}</td>
-                    <td class="td2">{{position}}</td>
-                    <td class="td3">{{lastGameScore}}</td>
-                    <td class="td4">{{seasonAverageScore}}</td>
-                </tr-->
     </tbody>
 </table>
+--}}
 
-<section>
+{{!--
+<!--section>
         <span>id,</span>
         <span>player,</span>
         <span>season,</span>
@@ -65,21 +56,24 @@
         <span>overallGrade</span>
 
     <br>
-    {{#each item in controller}}
-            <span>{{item.id}},</span>
-            <span>{{item.id}},</span>
+    {{!#each item in controller}}
+            <span>{{!item.id}},</span>
+            <span>{{!item.id}},</span>
             <span>2014,</span>
-            <span>{{item.seasonNumPlays}},</span>
-            <span>{{item.seasonNumGames}},</span>
-            <span>{{item.seasonAvgCat1Grade}},</span>
-            <span>{{item.seasonAvgCat2Grade}},</span>
-            <span>{{item.seasonAvgCat3Grade}},</span>
-            <span>{{item.seasonAvgGrade}}</span>
+            <span>{{!item.seasonNumPlays}},</span>
+            <span>{{!item.seasonNumGames}},</span>
+            <span>{{!item.seasonAvgCat1Grade}},</span>
+            <span>{{!item.seasonAvgCat2Grade}},</span>
+            <span>{{!item.seasonAvgCat3Grade}},</span>
+            <span>{{!item.seasonAvgGrade}}</span>
         <br>
-    {{/each}}
-</section>
+    {{!/each}}
+</section-->
+--}}
 
+{{!--
 <section>
+    <h2>seasonTopPerformers</h2>
     <span>player,</span>
     <span>season,</span>
     <span>numPlays,</span>
@@ -90,16 +84,43 @@
     <span>overallGrade</span>
 
     <br>
-    {{!debugger}}
-    {{!#each item in seasonTopPerformers}}
-        <span>{{!item.player.fullName}},</span>
-        <span>{{!item.season}},</span>
-        <span>{{!item.numPlays}},</span>
-        <span>{{!item.numGames}},</span>
-        <span>{{!item.mainCat1Grade}},</span>
-        <span>{{!item.mainCat2Grade}},</span>
-        <span>{{!item.mainCat3Grade}},</span>
-        <span>{{!item.overallGrade}}</span>
+    {{#each item in seasonTop10Performers}}
+        <span>{{item.player.fullName}},</span>
+        <span>{{item.player.shortNameInitialLast}},</span>
+        <span>{{item.season}},</span>
+        <span>{{item.numPlays}},</span>
+        <span>{{item.numGames}},</span>
+        <span>{{item.mainCat1Grade}},</span>
+        <span>{{item.mainCat2Grade}},</span>
+        <span>{{item.mainCat3Grade}},</span>
+        <span>{{item.overallGrade}}</span>
         <br>
-    {{!/each}}
+    {{/each}}
 </section>
+--}}
+
+<table class="table top10">
+    <thead>
+    <tr>
+        <th class="th1">Top Ten Overall Performers</th>
+        <th class="th2">Position</th>
+        <th class="th3">Last Game</th>
+        <th class="th4">Season Avg</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each item in seasonTop10Performers itemController='dashboard/topItem'}}
+        {{#link-to "player" item.player tagName="tr"}}
+            <td class="td1">{{item.index}}) {{#link-to "player" item.player}}{{item.player.shortNameInitialLast}}{{/link-to}}</td>
+            {{!item.player.jerseyNumber}}
+            <td class="td2">{{item.player.position}}</td>
+            <td class="td3"><div class="table-div">{{item.player.lastGameAvgGrade}}<span class="table-badge">{{item.player.lastGameNumPlays}}</span></div></td>
+            <td class="td4"><div class="table-div">{{item.overallGrade}}<span class="table-badge">{{item.numPlays}}</span></div></td>
+        {{/link-to}}
+    {{else}}
+        <tr>
+            <td>no players...</td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>

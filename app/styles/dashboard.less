@@ -277,7 +277,15 @@
   }
   height:40px;
   text-align:center;
+  &:hover,
+  &:focus {
+    background-color: #4888EF;
+    color:#fff;
+    text-decoration: none;
+    cursor:pointer;
+  }
 }
+
 .dashboard .top10 tbody,
 .dashboard .top10 tr,
 .dashboard .top10 td {
@@ -286,7 +294,9 @@
   vertical-align: center;
   a {
     color:#fff;
+    text-decoration:none;
   }
+
 }
 .dashboard .top10 .td1 {
   .dashboard-color-column1;

@@ -58,6 +58,12 @@ export default Ember.Route.extend({
             header.setMessage2Left('12/12/14'); //set today's date
             header.setMessage2Right('Welcome {{username}}, {{teamname}}');
             return true; // Bubble the didTransition event
+        },
+        toggleMenu: function() {
+            console.log('toggleMenu');
+            this.controller.toggleProperty('menuVisible');
         }
+    },
+    events: {
     }
 });

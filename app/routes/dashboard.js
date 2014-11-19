@@ -59,19 +59,67 @@ export default Ember.Route.extend({
             header.setMessage2Right('Welcome {{username}}, {{teamname}}');
             return true; // Bubble the didTransition event
         },
-        viewPlayerInformation: function() {
-            console.log('viewPlayerInformation')
+        playerViewPlayerInformation: function() {
+            console.log('playerViewPlayerInformation')
             this.controller.toggleProperty('menuVisible');
             this.transitionTo('players');
         },
-        createScoutingReport: function() {
-            console.log('createScoutingReport')
+        playerCreateScoutingReport: function() {
+            console.log('playerCreateScoutingReport')
             this.controller.toggleProperty('menuVisible');
         },
-        manageRoster: function() {
-            console.log('manageRoster')
+        playerManageRoster: function() {
+            console.log('playerManageRoster')
             this.controller.toggleProperty('menuVisible');
         },
+
+        gameViewGameList: function() {
+            console.log('gameViewGameList')
+            this.controller.toggleProperty('menuVisible');
+        },
+        gameSetUpGame: function() {
+            console.log('gameSetUpGame')
+            this.controller.toggleProperty('menuVisible');
+        },
+        gameGradePlayers: function() {
+            console.log('gameGradePlayers')
+            this.controller.toggleProperty('menuVisible');
+        },
+
+        reportGamePerformance: function() {
+            console.log('reportGamePerformance')
+            this.controller.toggleProperty('menuVisible');
+        },
+        reportThirdDownPerformance: function() {
+            console.log('reportThirdDownPerformance')
+            this.controller.toggleProperty('menuVisible');
+        },
+        reportRedZonePerformance: function() {
+            console.log('reportRedZonePerformance')
+            this.controller.toggleProperty('menuVisible');
+        },
+        reportScoutingReportSummary: function() {
+            console.log('reportScoutingReportSummary')
+            this.controller.toggleProperty('menuVisible');
+        },
+
+        adminManageAccountInformation: function() {
+            console.log('adminManageAccountInformation')
+            this.controller.toggleProperty('menuVisible');
+        },
+        adminSetUpPositionGroups: function() {
+            console.log('adminSetUpPositionGroups')
+            this.controller.toggleProperty('menuVisible');
+        },
+        adminManageUserSecurityGroups: function() {
+            console.log('adminManageUserSecurityGroups')
+            this.controller.toggleProperty('menuVisible');
+        },
+        adminSetReportDistributionPreferences: function() {
+            console.log('adminSetReportDistributionPreferences')
+            this.controller.toggleProperty('menuVisible');
+        },
+
         toggleMenu: function(menuName) {
             //console.log('toggleMenu to '+menuName);
             var curMenuName = this.controller.get("menuName");
@@ -89,9 +137,18 @@ export default Ember.Route.extend({
                         into: 'dashboard',                // template to render into
                         outlet: 'menu'     // name of outlet in template
                     });
-                }
-                if(menuName === "games") {
+                } else if(menuName === "games") {
                     this.render('dashboard/menugames', {  // template to render
+                        into: 'dashboard',                // template to render into
+                        outlet: 'menu'     // name of outlet in template
+                    });
+                } else if(menuName === "reports") {
+                    this.render('dashboard/menureports', {  // template to render
+                        into: 'dashboard',                // template to render into
+                        outlet: 'menu'     // name of outlet in template
+                    });
+                } else if(menuName === "admin") {
+                    this.render('dashboard/menuadmin', {  // template to render
                         into: 'dashboard',                // template to render into
                         outlet: 'menu'     // name of outlet in template
                     });

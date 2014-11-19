@@ -9,19 +9,16 @@
         {{#link-to 'reports'}}reports{{/link-to}}
         {{#link-to 'admin'}}admin{{/link-to--}}
         <div class="btn-group-vertical" role="group" aria-label="Dashboard menu">
-            <button type="button" class="btn btn-gd-menu btn-xl" {{action "toggleMenu"}}>players</button>
-            <button type="button" class="btn btn-gd-menu btn-xl" {{action "toggleMenu"}}>games</button>
-            <button type="button" class="btn btn-gd-menu btn-xl" {{action "toggleMenu"}}>reports</button>
-            <button type="button" class="btn btn-gd-menu btn-xl" {{action "toggleMenu"}}>admin</button>
+            <button type="button" class="btn btn-gd-menu btn-xl" {{action "toggleMenu" "players"}}>players</button>
+            <button type="button" class="btn btn-gd-menu btn-xl" {{action "toggleMenu" "games"}}>games</button>
+            <button type="button" class="btn btn-gd-menu btn-xl" {{action "toggleMenu" "reports"}}>reports</button>
+            <button type="button" class="btn btn-gd-menu btn-xl" {{action "toggleMenu" "admin"}}>admin</button>
         </div>
     </div>
     <div class="section-main">
         {{outlet}}
-        <div class="gd-modal btn-group-vertical" {{bind-attr class="menuVisible:visible"}} role="group" aria-label="Dashboard sub-menu">
-            <button type="button" class="btn btn-gd-menu btn-xl" {{action "toggleMenu"}}>XLarge Button</button>
-            <button type="button" class="btn btn-gd-menu btn-xl" {{action "toggleMenu"}}>Large Button</button>
-            <button type="button" class="btn btn-gd-menu btn-xl" {{action "toggleMenu"}}>Button</button>
-            <button type="button" class="btn btn-gd-menu btn-xl" {{action "toggleMenu"}}>Button</button>
+        <div class="gd-modal btn-group-vertical" {{bind-attr class="menuVisible:visible"}} role="group" aria-label="player menu">
+            {{outlet menu}}
         </div>
     </div>
     <div class="section-right">

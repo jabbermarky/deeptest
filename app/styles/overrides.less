@@ -19,6 +19,12 @@
 // Success appears as green
 .btn-gd-menu {
   .button-variant(@btn-gd-menu-color; @btn-gd-menu-bg; @btn-gd-menu-border);
+  &:hover,
+  &:focus {
+    background-color: #4888EF;
+    color:#fff;
+    text-decoration: none;
+  }
 }
 
 // default menu is hidden (left = -200px)
@@ -26,10 +32,11 @@
   overflow: hidden;
   position: absolute;
   top: 20px;
-  left: -200px;
+  left: -400px;
   z-index: 1;
   -webkit-overflow-scrolling: touch;
   outline: 0;
+
 }
 
 // visible menu is at left = 0

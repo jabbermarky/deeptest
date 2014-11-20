@@ -5,12 +5,12 @@ export default Ember.Route.extend({
     allPlayers : function() {
         return this.store.find('player');
     }.property(),
-    newPlayers:function() {
+/*    newPlayers:function() {
         return this.store.filter('player', function(player) {
                 return player.get('isNewPlayer');
             }
         );
-    }.property(),
+    }.property(),*/
 
     allStats:function() {
         return this.store.find('seasonStat');
@@ -131,34 +131,16 @@ export default Ember.Route.extend({
         },
 
         toggleMenu: function(menuName) {
-            //console.log('toggleMenu to '+menuName);
             var curMenuName = this.controller.get("menuName");
             var isMenuVisible = this.controller.get("menuVisible");
             var match = (curMenuName === menuName);
-            //console.log('isMenuVisible = ' + isMenuVisible);
-            //console.log('match = ' + match);
-            //console.log('curMenuName = '+curMenuName);
             if(!isMenuVisible || !match) {
                 // change menu template
-                //console.log('change menu template');
+                // if there is no menu visible
+                // if the current menu is not the requested menu
                 this.controller.set("menuName",menuName);
-                if(menuName === "players") {
-                    this.render('dashboard/menuplayers', {  // template to render
-                        into: 'dashboard',                // template to render into
-                        outlet: 'menu'     // name of outlet in template
-                    });
-                } else if(menuName === "games") {
-                    this.render('dashboard/menugames', {  // template to render
-                        into: 'dashboard',                // template to render into
-                        outlet: 'menu'     // name of outlet in template
-                    });
-                } else if(menuName === "reports") {
-                    this.render('dashboard/menureports', {  // template to render
-                        into: 'dashboard',                // template to render into
-                        outlet: 'menu'     // name of outlet in template
-                    });
-                } else if(menuName === "admin") {
-                    this.render('dashboard/menuadmin', {  // template to render
+                if (menuName) {
+                    this.render('dashboard/'+menuName, {  // template to render
                         into: 'dashboard',                // template to render into
                         outlet: 'menu'     // name of outlet in template
                     });
@@ -166,7 +148,6 @@ export default Ember.Route.extend({
             }
             if(menuName ==="") {
                 // hide menu
-                //console.log('blank menuName')
                 this.controller.toggleProperty('menuVisible');
                 return;
             }
@@ -174,7 +155,6 @@ export default Ember.Route.extend({
                 // toggle menu visibility
                 // if match then hide
                 // if menu is not visible then show
-                //console.log('toggle visibility');
                 this.controller.toggleProperty('menuVisible');
             }
         }

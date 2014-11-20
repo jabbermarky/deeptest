@@ -1,14 +1,11 @@
 {{render "header"}}
-{{! this page uses a button row in the navbar. modify navbar with navbar-button-row for proper button spacing}}
-
-{{! this page uses a button row in the navbar. modify container with navbar-button-row for proper button spacing}}
 <div class='container-fluid dashboard'>
     <div class="section-nav">
         <div class="btn-group-vertical" role="group" aria-label="Dashboard menu">
-            {{#menu-button action="toggleMenu" param="players" }}players{{/menu-button}}
-            {{#menu-button action="toggleMenu" param="games"   }}games{{/menu-button}}
-            {{#menu-button action="toggleMenu" param="reports" }}reports{{/menu-button}}
-            {{#menu-button action="toggleMenu" param="admin"   }}admin{{/menu-button}}
+            {{#menu-button action="toggleMenu" param="menuplayers" }}players{{/menu-button}}
+            {{#menu-button action="toggleMenu" param="menugames"   }}games{{/menu-button}}
+            {{#menu-button action="toggleMenu" param="menureports" }}reports{{/menu-button}}
+            {{#menu-button action="toggleMenu" param="menuadmin"   }}admin{{/menu-button}}
         </div>
     </div>
     <div class="section-main">
@@ -23,6 +20,3 @@
         {{outlet veteran-watch-list}}
     </div>
 </div>
-<!--footer style="background:#DDD;">
-    <p>application footer</p>
-</footer-->

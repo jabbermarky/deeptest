@@ -4,20 +4,16 @@
 {{! this page uses a button row in the navbar. modify container with navbar-button-row for proper button spacing}}
 <div class='container-fluid dashboard'>
     <div class="section-nav">
-        {{!--#link-to 'players'}}players{{/link-to}}
-        {{#link-to 'games'}}games{{/link-to}}
-        {{#link-to 'reports'}}reports{{/link-to}}
-        {{#link-to 'admin'}}admin{{/link-to--}}
         <div class="btn-group-vertical" role="group" aria-label="Dashboard menu">
-            <button type="button" class="btn btn-gd-menu btn-xl" {{action "toggleMenu" "players"}}>players</button>
-            <button type="button" class="btn btn-gd-menu btn-xl" {{action "toggleMenu" "games"}}>games</button>
-            <button type="button" class="btn btn-gd-menu btn-xl" {{action "toggleMenu" "reports"}}>reports</button>
-            <button type="button" class="btn btn-gd-menu btn-xl" {{action "toggleMenu" "admin"}}>admin</button>
+            {{#menu-button action="toggleMenu" param="players" }}players{{/menu-button}}
+            {{#menu-button action="toggleMenu" param="games"   }}games{{/menu-button}}
+            {{#menu-button action="toggleMenu" param="reports" }}reports{{/menu-button}}
+            {{#menu-button action="toggleMenu" param="admin"   }}admin{{/menu-button}}
         </div>
     </div>
     <div class="section-main">
         {{outlet}}
-        <div class="gd-modal btn-group-vertical" {{bind-attr class="menuVisible:visible"}} role="group" aria-label="player menu">
+        <div class="gd-modal btn-group-vertical" {{bind-attr class="menuVisible:visible"}} role="group" aria-label="Dashboard Sub Menu">
             {{outlet menu}}
         </div>
     </div>

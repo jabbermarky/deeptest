@@ -20,9 +20,6 @@ export default Ember.Route.extend({
     vetStats: Ember.computed.filterBy('allStats', 'player.isNewPlayer', false),
 
     renderTemplate: function() {
-        var newPlayerFilter = this.store.filter('player', function(player){
-            return player.get('isNewPlayer');
-        });
         this.render();
         this.render('dashboard/index', { // template to render
             into: 'dashboard',           // template to render into
@@ -60,64 +57,77 @@ export default Ember.Route.extend({
             return true; // Bubble the didTransition event
         },
         playerViewPlayerInformation: function() {
-            console.log('playerViewPlayerInformation')
+            console.log('playerViewPlayerInformation');
             this.controller.toggleProperty('menuVisible');
             this.transitionTo('players');
         },
         playerCreateScoutingReport: function() {
-            console.log('playerCreateScoutingReport')
+            console.log('playerCreateScoutingReport');
             this.controller.toggleProperty('menuVisible');
+            this.transitionTo('players');
         },
         playerManageRoster: function() {
-            console.log('playerManageRoster')
+            console.log('playerManageRoster');
             this.controller.toggleProperty('menuVisible');
+            this.transitionTo('players');
         },
 
         gameViewGameList: function() {
-            console.log('gameViewGameList')
+            console.log('gameViewGameList');
             this.controller.toggleProperty('menuVisible');
+            this.transitionTo('games');
         },
         gameSetUpGame: function() {
-            console.log('gameSetUpGame')
+            console.log('gameSetUpGame');
             this.controller.toggleProperty('menuVisible');
+            this.transitionTo('games');
         },
         gameGradePlayers: function() {
-            console.log('gameGradePlayers')
+            console.log('gameGradePlayers');
             this.controller.toggleProperty('menuVisible');
+            this.transitionTo('games');
         },
 
         reportGamePerformance: function() {
-            console.log('reportGamePerformance')
+            console.log('reportGamePerformance');
             this.controller.toggleProperty('menuVisible');
+            this.transitionTo('reports');
         },
         reportThirdDownPerformance: function() {
-            console.log('reportThirdDownPerformance')
+            console.log('reportThirdDownPerformance');
             this.controller.toggleProperty('menuVisible');
+            this.transitionTo('reports');
         },
         reportRedZonePerformance: function() {
-            console.log('reportRedZonePerformance')
+            console.log('reportRedZonePerformance');
             this.controller.toggleProperty('menuVisible');
+            this.transitionTo('reports');
         },
         reportScoutingReportSummary: function() {
-            console.log('reportScoutingReportSummary')
+            console.log('reportScoutingReportSummary');
             this.controller.toggleProperty('menuVisible');
+            this.transitionTo('reports');
         },
 
         adminManageAccountInformation: function() {
-            console.log('adminManageAccountInformation')
+            console.log('adminManageAccountInformation');
             this.controller.toggleProperty('menuVisible');
+            this.transitionTo('admin');
         },
         adminSetUpPositionGroups: function() {
-            console.log('adminSetUpPositionGroups')
+            console.log('adminSetUpPositionGroups');
             this.controller.toggleProperty('menuVisible');
+            this.transitionTo('admin');
         },
         adminManageUserSecurityGroups: function() {
-            console.log('adminManageUserSecurityGroups')
+            console.log('adminManageUserSecurityGroups');
             this.controller.toggleProperty('menuVisible');
+            this.transitionTo('admin');
         },
         adminSetReportDistributionPreferences: function() {
-            console.log('adminSetReportDistributionPreferences')
+            console.log('adminSetReportDistributionPreferences');
             this.controller.toggleProperty('menuVisible');
+            this.transitionTo('admin');
         },
 
         toggleMenu: function(menuName) {

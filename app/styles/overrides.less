@@ -14,6 +14,7 @@
 .btn-xl {
   // line-height: ensure even-numbered height of button next to large input
   .button-size(@padding-xlarge-vertical; @padding-xlarge-horizontal; @font-size-xlarge; @line-height-xlarge; @border-radius-large);
+  border-width: 0;
 }
 
 // Success appears as green
@@ -26,6 +27,11 @@
     text-decoration: none;
   }
 }
+.btn-group-vertical {
+  >.btn+.btn {  // only put top border on 2nd and later buttons
+    border-top-width:2px;
+  }
+}
 
 // default menu is hidden (left = -200px)
 .gd-modal {
@@ -36,6 +42,7 @@
   z-index: 1;
   -webkit-overflow-scrolling: touch;
   outline: 0;
+  border:2px solid #000;
 
 }
 

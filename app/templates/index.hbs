@@ -1,20 +1,4 @@
 {{render "bigheader"}}
-{{!--<div class="container-fluid container-index big-background">
-    <div class="row">
-        <div class="index-button pull-left">
-            {{#link-to 'login' class="button-new"}}existing member - sign in{{/link-to}}
-        </div>
-        <div class="index-button pull-right">
-            {{#link-to 'signup' class="button-new"}}new member - sign up{{/link-to}}
-        </div>
-     </div>
-     <div class="row pull-right">
-         <br>
-         <span class="block-color-featuretext">Scout like a pro.&nbsp&nbsp</span>
-         <span > Everywhere you go.</span>
-     </div>
-</div>--}}
-{{! this page uses a button row in the navbar. modify container with navbar-button-row for proper button spacing}}
 <div class='container container-index index-background'>
     <div class="row row-index">
         <p class="col-sm-5 col-md-5 col-lg-4" {{bind-attr class="credentialError:bg-danger"}}>{{errorMessage}}</p>

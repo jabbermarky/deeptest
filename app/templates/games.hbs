@@ -2,15 +2,54 @@
 {{! this page uses a button row in the navbar. modify navbar with navbar-button-row for proper button spacing}}
 <div class="navbar xnavbar-inverse navbar-button-row">
     <div class="container-fluid block-grid-row block-color-header">
-        <div class="pull-left ">
-            {{#link-to 'dashboard' classNames="button-new block-grid-row-first"}}◀{{/link-to}}
+        {{!--#header-button action="goBack"}}◀{{/header-button--}}
+        <div class="block block-color-header">
+            <span>Please select a game to grade</span>
         </div>
-        {{#header-button}}Test Header Button{{/header-button}}
-        <!--div class="block block-color-header">
+        {{#header-button class="pull-right" action="createGame"}}create new game{{/header-button}}
+    </div>
+</div>
+
+<div class='container-fluid container-button-row games'>
+    <table cellpadding=0 cellspacing=0 class="table games-list">
+        <tbody>
+            {{#each controller}}
+            <tr class="games-list-home">
+                <td class="td1 games-list-ltgray">Home</td>
+                <td class="td2">{{homeTeam}}</td>
+                <td class="td3">{{homeScore}}</td>
+                <td class="td4 games-list-ltgray">Date</td>
+                <td class="td5">{{date}}</td>
+                <td class="td6 games-list-ltgray">Surface</td>
+                <td class="td7">{{surface}}</td>
+                <td class="td8" rowspan="2"><button class="btn btn-gd-menu btn-xl pull-right" {{action "gradeGame" this}}>grade game</button></td>
+            </tr>
+            <tr class="games-list-visitor">
+                <td class="td1 games-list-ltgray">Visitor</td>
+                <td class="td2">{{visitorTeam}}</td>
+                <td class="td3">{{visitorScore}}</td>
+                <td class="td4 games-list-ltgray">Kickoff</td>
+                <td class="td5">{{kickoff}}</td>
+                <td class="td6 games-list-ltgray">Field Cond</td>
+                <td class="td7">{{fieldCond}}</td>
+            </tr>
+            {{else}}
+            <tr>
+                <td>no games...</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+
+
+<!--div class="navbar xnavbar-inverse navbar-button-row">
+    <div class="container-fluid block-grid-row block-color-header">
+        <div class="block block-color-header">
             <span class="block-line1a">line1a</span>
             <span class="block-line2a">line2a</span>
             <span class="block-line2c">header color</span>
-        </div-->
+        </div>
         <div class="block pull-right block-grid-row-last">
             <span class="block-line1b">line1b</span>
             <span class="block-line2b">line2b</span>
@@ -34,14 +73,6 @@
             <span>default text</span>
         </div>
     </div>
-</div>
+</div-->
 
-{{! this page uses a button row in the navbar. modify container with navbar-button-row for proper button spacing}}
-<div class='container-fluid container-button-row'>
-    <div class="wrapper-leftnav" style="height:100%;">
-        <div class="xcontent-main">
-                <h1>Games Template</h1>
-        </div>
-    </div>
-</div>
 

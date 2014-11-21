@@ -18,18 +18,32 @@ Both of these will look for a series of objects who’s names start with UserNew
 */
 
 Router.map(function() {
+    // splash / entry point
     this.route('index',    { path: '/' });
+
+    // for user/account management
     this.route('login',    { path: '/login'});
     this.route('signup',   { path: '/signup'});
     this.route('forgotpassword');
-	  this.route('dashboard', { path: '/dashboard'});
-	  this.route("players",   { path: '/players' });
-	  this.resource('player', { path: '/player/:player_id' });
-	  this.route("games",     { path: '/games' });
-	  this.route("reports",   { path: '/reports' });
-	  this.route("admin",     { path: '/admin' });
+
+    // for dashboards
+    this.route('dashboard', { path: '/dashboard'});
     this.route('dashboard/topNewPlayers');
 
+    // for player management
+    this.route("players",   { path: '/players' });
+    this.resource('player', { path: '/player/:player_id' });
+
+    // for games and grading
+    this.route("games",     { path: '/games' });
+
+    // for reports
+    this.route("reports",   { path: '/reports' });
+
+    // for administrative
+    this.route("admin",     { path: '/admin' });
+
+    // for testing only
     this.resource('about', function() {
     this.route('location');
     this.route('product');

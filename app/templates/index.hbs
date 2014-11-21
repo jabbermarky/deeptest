@@ -15,16 +15,35 @@
      </div>
 </div>--}}
 {{! this page uses a button row in the navbar. modify container with navbar-button-row for proper button spacing}}
-<div class='container-fluid container-index big-background'>
-    <div class="row row-login">
-        {{input type="text" value=username size="25" placeholder="Email address"}}
+<div class='container container-index index-background'>
+    <div class="row row-index">
+        <p class="col-sm-5 col-md-5 col-lg-4" {{bind-attr class="credentialError:bg-danger"}}>{{errorMessage}}</p>
     </div>
-    <div class="row row-login">
-        {{input type="text" value=password size="25" placeholder="Password"}}
+    <div class="row row-index">
+        <div class="col-sm-5 col-md-5 col-lg-4 ">
+            <div class="row" {{bind-attr class="credentialError:has-error"}}>
+                {{input type="text" class="form-control" value=username placeholder="Email address"}}
+            </div>
+            <div class="row" {{bind-attr class="credentialError:has-error"}}>
+                {{input type="password" class="form-control" value=password placeholder="Password"}}
+            </div>
+        </div>
     </div>
-    <div class="row row-login">
-        <div class="col-sm-2 col-md-2 col-lg-2 col-sm-offset-5 col-md-offset-5 col-lg-offset-5">
-            {{#link-to 'dashboard' classNames="button-new"}}sign in{{/link-to}}
+    <div class="row row-index">
+        <div class="col-sm-5 col-md-5 col-lg-4 ">
+            <div class="row">
+                {{!--<button class="btn btn-gd-menu btn-xl" style="width:100%;" >{{#link-to 'dashboard'}}sign in{{/link-to}}</button>--}}
+                <button class="btn btn-gd-menu btn-xl btn-block"  {{action "signIn"}}>sign in</button>
+            </div>
+            <div class="row" style="text-align:center;">
+                <br>
+                {{#link-to 'forgotpassword' class="index-link"}}forgot password{{/link-to}}
+            </div>
+        </div>
+        <div class="col-sm-5 col-md-5 col-lg-4 col-sm-offset-2 col-md-offset-2 col-lg-offset-4">
+            <div class="row">
+                <button class="btn btn-gd-menu btn-xl btn-block" >{{#link-to 'signup'}}new member - sign up{{/link-to}}</button>
+            </div>
         </div>
     </div>
 </div>

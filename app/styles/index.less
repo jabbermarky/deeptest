@@ -3,10 +3,22 @@
 //
 
 .navbar-big {
+  padding:20px;
   height:90px;
-  background-image: url("img/GD_logo_bar_0519141.png");
+  background: url("img/GD_logo_bar_0519141.png");
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color:#222;
+}
+
+.index-background {
+  background-image: url("img/main_bkgd.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position-y: 19px;
 }
 
 .index-text {
@@ -16,25 +28,39 @@
 .index-button {
   width:340px;
 }
-
 .container-index {
-  padding-top:240px;
+  padding-top:290px;
   padding-bottom:80px;
   padding-left:50px;
   padding-right:50px;
-  font-size: 30px;
-  font-weight:bolder;
+  font-size: 16px;
+  .bg-danger {
+    padding:15px;
+  }
 }
 
-.row-login {
+.row-index {
   line-height: 25px;
   margin-top:10px;
   margin-bottom:10px;
-  //.text-center();
+  color:#252525;
   input {
-    margin-top:10px;
-    margin-bottom:10px;
-    border-color: #4a4a4a;
-    .myplaceholder(#252525);
+    font-size: 16px;
+    padding:5px 10px;
+    margin-top:0;
+    margin-bottom:25px;
+    border-color: #606060;
+    .myplaceholder(#606060);
+    width: 100%;
   }
+  a {
+    color:#fff;
+    text-decoration: none;
+  }
+  .index-link {
+    color:#05012f;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
 }

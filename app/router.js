@@ -36,6 +36,7 @@ Router.map(function() {
 
     // for games and grading
     this.route("games",     { path: '/games' });
+    this.resource('game',   { path: '/game/:game_id' });
 
     // for reports
     this.route("reports",   { path: '/reports' });

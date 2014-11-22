@@ -14,6 +14,7 @@ export default Ember.Route.extend({
         },
         gradeGame: function(game) {
             console.log('gradeGame '+game);
+            this.transitionTo('game',game);
         }
     },
     model: function() {

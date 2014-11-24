@@ -1,18 +1,49 @@
 {{render "header"}}
 {{! this page uses a button row in the navbar. modify navbar with navbar-button-row for proper button spacing}}
-<div class="navbar xnavbar-inverse navbar-button-row">
-    <div class="container-fluid block-grid-row block-color-header">
-        {{#header-button action="goBack"}}◀{{/header-button}}
-        <div class="header-block-text" xstyle="display:inline;">
-            <span>{{homeTeam}}</span>
+
+<nav class="navbar xnavbar-inverse navbar-button-row" role="navigation">
+    <div class="container-fluid block-color-header">
+        <div class="navbar-left">
+            {{#header-button class='navbar-btn btn-narrow navbar-left' action="goBack"}}◀︎{{/header-button}}
+            <p class="navbar-text">1</p>
+            {{#header-button class='navbar-btn btn-narrow navbar-left' }}►{{/header-button}}
+            <div class="navbar-text">
+                <span class="block-line1a">line1a</span>
+                <span class="block-line2a">line2a</span>
+                <span class="badge-left">badge left</span>
+            </div>
+            <div class="navbar-text">
+                <span class="block-line1b">line1b</span>
+                <span class="block-line2b">line2b</span>
+                <span class="badge-left">badge left</span>
+            </div>
+            <div class="navbar-text">
+                <span class="block-line1">line1</span>
+                <span class="block-line2">line2</span>
+                <span class="badge-left">badge l</span>
+            </div>
+            <div class="navbar-text">
+                <span class="block-line1">line1</span>
+                <span class="block-line2">line2</span>
+                <span class="badge-right">badge r</span>
+            </div>
+            <div class="navbar-text">
+                <span class="block-grid-header">grid header</span>
+                <span class="badge-left">badge left</span>
+            </div>
+            <div class="navbar-text">
+                <span>default text</span>
+            </div>
         </div>
-        {{#header-button action="goBack"}}►{{/header-button}}
-        {{#header-button class="pull-right" }}change play type{{/header-button}}
+        <div class="navbar-right" >
+            {{#header-button class='navbar-btn' }}Pull Right{{/header-button}}
+        </div>
     </div>
-</div>
+</nav>
+
 
 <div class='container-fluid container-button-row games'>
-    {{homeTeam}}
+<h3>put game here</h3>
 </div>
 
 

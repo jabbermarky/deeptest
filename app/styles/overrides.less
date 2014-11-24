@@ -24,7 +24,10 @@
   .button-size(@padding-xlarge-vertical; @padding-xlarge-horizontal; @font-size-xlarge; @line-height-xlarge; @border-radius-large);
   border-width: 0;
 }
-
+.btn-narrow {
+  padding-left:10px;
+  padding-right:10px;
+}
 // Success appears as green
 .btn-gd-menu {
   .button-variant(@btn-gd-menu-color; @btn-gd-menu-bg; @btn-gd-menu-border);
@@ -79,10 +82,14 @@ body {
 .navbar {
   min-height: @page-header-height;
   margin-bottom:0px;
-  border-bottom-width: 0px;
+  //border-bottom-width: 0px;
+  border:none;
 }
 
-
+.navbar-btn {
+  margin-bottom:0;
+  margin-top:0;
+}
 // Placeholder text
 .myplaceholder(@color: @input-color-placeholder) {
   &::-moz-placeholder {
@@ -179,22 +186,161 @@ body {
   padding-bottom:10px;
   //padding-bottom:1vw;
 }
-.header-block-text {
-  display:inline-flex;
-  min-height: 80px;
-  height:80px;
-  line-height: 80px;
+.translate {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.parent {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.child {
+  //display:block;
+  background: #ffdb4c;
+  //height: 90px;
+  //position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding:5px;
+}
+/*
+.navbar-text {
+  //min-height: 80px;
+  //height:80px;
+  //line-height: 80px;
   font-family: balanceweb, Arial;
-  margin-left: 5px;
-  margin-right:5px;
   font-size: 21px;
-
+  margin-top:25px;
+//  margin-bottom:25px;
+}
+*/
+.navbar-text {
+  font-family: balanceweb, Arial;
+  font-size: 21px;
+  height:55px;
+  margin-top:25px;                      // height + margin-top + margin-bottom= 80px
+  margin-bottom:0;
+  color: #FFF;                          /* set this with a modifier */
+  position: relative;
   span {
-    display:inline-block;
-    vertical-align: middle;
-    line-height: normal;
+    //padding-left:5px;
+    //padding-right:5px;
+  }
+  .block-line1 {
+    margin-top:-15px;
+    margin-left:10px;
+    margin-right:10px;
+    font-size: 16px;
+    line-height:18px;
+    display:block;
+  }
+  .block-line2 {
+    margin-top:10px;
+    margin-right:10px;
+    margin-left:10px;
+    font-size: 28px;
+    font-weight:bolder;
+    line-height:30px;
+    display:block;
+  }
+  .block-line1a {
+    margin-top:-15px;
+    margin-right:10px;
+    margin-left:10px;
+    font-size: 22px;
+    line-height:22px;
+    display:block;
+    text-align: left;
+  }
+  .block-line2a {
+    margin-top:10px;
+    margin-right:10px;
+    margin-left:10px;
+    font-size: 16px;
+    line-height:16px;
+    display:block;
+    text-align: left;
+  }
+  .block-line1b {
+    margin-top:-15px;
+    margin-left:10px;
+    margin-right:10px;
+    margin-bottom:3px;
+    display:block;
+    text-align: left;
+    font-size: 17px;
+    line-height:17px;
+    font-weight:bold;
+  }
+  .block-line2b {
+    margin-left:10px;
+    margin-right:10px;
+    display:block;
+    text-align: left;
+    font-size: 13px;
+    line-height:16px;
+    font-weight:normal;
+  }
+  .block-line1d {
+    margin-left:10px;
+    margin-right:10px;
+    font-size: 18px;
+    line-height:20px;
+  }
+  .block-grid-header {
+    margin-top:-15px;
+    margin-right:10px;
+    margin-left:10px;
+    //margin-right:.5vw;
+    //margin-left:.5vw;
+    //margin-top:1vw;
+    font-size: 14px;
+    line-height:14px;
+    //font-size:2.8vw;
+    //line-height:2.8vw;
+    display:block;
+    font-weight:bold;
+  }
+  @media (min-width: 768px) {
+    .block-grid-header {
+      font-size:13px;                    /* set this with a modifier */
+      //font-size:1.5vw;
+      line-height:14px;                   /* set this with a modifier */
+      //line-height:1.55vw;
+    }
+  }
+  .badge-right {
+    position:absolute;
+    bottom:0;
+    right:0;
+    font-size: 13px;
+    line-height:15px;
+    display: inline-block;
+    padding: 2px 7px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .badge-left {
+    position: absolute;
+    bottom: 0;
+    left:0;
+    margin-left:10px;
+    margin-right:10px;
+    display:block;
+    text-align: left;
+    font-size: 13px;
+    line-height:15px;
+    //font-weight:bold;
+    padding-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }
+
+
+
 .block {
   -webkit-font-smoothing:antialiased;
   box-sizing: border-box;
@@ -446,7 +592,9 @@ body {
 }
 
 
-.navbar > .block-grid-row {
+.navbar > .block-grid-row,
+.navbar > .container,
+.navbar > .container-fluid {
   padding-left:0px;
   padding-right:0px;
 }

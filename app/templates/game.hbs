@@ -3,40 +3,37 @@
 
 <nav class="navbar xnavbar-inverse navbar-button-row" role="navigation">
     <div class="container-fluid block-color-header">
-        <div class="navbar-left">
+        <div>
             {{#header-button class='navbar-btn btn-narrow navbar-left' action="goBack"}}◀︎{{/header-button}}
             <p class="navbar-text">1</p>
             {{#header-button class='navbar-btn btn-narrow navbar-left' }}►{{/header-button}}
-            <div class="navbar-text">
-                <span class="block-line1a">line1a</span>
-                <span class="block-line2a">line2a</span>
-                <span class="badge-left">badge left</span>
-            </div>
-            <div class="navbar-text">
-                <span class="block-line1b">line1b</span>
-                <span class="block-line2b">line2b</span>
-                <span class="badge-left">badge left</span>
-            </div>
-            <div class="navbar-text">
-                <span class="block-line1">line1</span>
-                <span class="block-line2">line2</span>
-                <span class="badge-left">badge l</span>
-            </div>
-            <div class="navbar-text">
-                <span class="block-line1">line1</span>
-                <span class="block-line2">line2</span>
-                <span class="badge-right">badge r</span>
-            </div>
-            <div class="navbar-text">
-                <span class="block-grid-header">grid header</span>
-                <span class="badge-left">badge left</span>
-            </div>
-            <div class="navbar-text">
-                <span>default text</span>
-            </div>
+        </div>
+        <div class="navbar-text">
+            <span class="block-line1e">
+                Qtr:&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Dn:&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                To go:&nbsp;&nbsp;10
+            </span>
+            <span class="block-line1f"><b>Formation:</b> [field value]</span>
+            <span class="block-line1f"><b>Backfield:</b> [field value]</span>
+            <span class="block-line1f"><b>Play:</b> [play call] [play type]</span>
+        </div>
+        <div class="navbar-text">
+            <span class="block-line1e">
+                PRIN <b>ball on</b> PRIN 22 LH
+            </span>
+            <span class="block-line1f"><b>Shift:</b> [shift on play]</span>
+            <span class="block-line1f"><b>Motion:</b> [motion on play]</span>
+            <span class="block-line1f"><b>Strength:</b> [play strength]</span>
+        </div>
+        <div class="navbar-text">
+            <span class="block-line1f"><b>Front:</b> [front used]</span>
+            <span class="block-line1f"><b>Stunt:</b> [stunt on play]</span>
+            <span class="block-line1f"><b>Blitz:</b> [blitz on play]</span>
+            <span class="block-line1f"><b>Cover:</b> [coverage]</span>
         </div>
         <div class="navbar-right" >
-            {{#header-button class='navbar-btn' }}Pull Right{{/header-button}}
+            {{#header-button class='navbar-btn' }}change play type{{/header-button}}
         </div>
     </div>
 </nav>
@@ -46,6 +43,37 @@
 <h3>put game here</h3>
 </div>
 
+{{!--
+{{#header-button class='navbar-btn navbar-left' }}button 1{{/header-button}}
+{{#header-button class='navbar-btn navbar-left' }}button 2{{/header-button}}
+<div class="navbar-text">
+    <span class="block-line1a">line1a</span>
+    <span class="block-line2a">line2a</span>
+    <span class="badge-left">badge left</span>
+</div>
+<div class="navbar-text">
+    <span class="block-line1b">line1b</span>
+    <span class="block-line2b">line2b</span>
+    <span class="badge-left">badge left</span>
+</div>
+<div class="navbar-text">
+    <span class="block-line1">line1</span>
+    <span class="block-line2">line2</span>
+    <span class="badge-left">badge l</span>
+</div>
+<div class="navbar-text">
+    <span class="block-line1">line1</span>
+    <span class="block-line2">line2</span>
+    <span class="badge-right">badge r</span>
+</div>
+<div class="navbar-text">
+    <span class="block-grid-header">grid header</span>
+    <span class="badge-left">badge left</span>
+</div>
+<div class="navbar-text">
+    <span>default text</span>
+</div>
+--}}
 
 <!--div class="navbar xnavbar-inverse navbar-button-row">
     <div class="container-fluid block-grid-row block-color-header">

@@ -6,6 +6,9 @@ export default Ember.Route.extend({
             var header = this.controllerFor('header');
             header.setPageName('Grade Players');
             return true; // Bubble the didTransition event
+        },
+        changePlayType: function() {
+            console.log('changePlayType');
         }
     }
 });

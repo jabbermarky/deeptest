@@ -1,7 +1,8 @@
 <!--suppress HtmlUnknownTarget -->
+{{!--
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
-		<div class="navbar-header">
+		<div class="navbar-header pull-left">
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
 				<span class="sr-only">Toggle navigation</span>
 				<span class="icon-bar"></span>
@@ -17,21 +18,47 @@
                     <img alt="GoDeep Mobile" src="assets/img/logo.png">
                 {{/link-to}}
             {{/if}}
-            <!--a class="navbar-brand" href="#">
-                <img alt="GoDeep Mobile" src="assets/img/logo.png">
-            </a-->
 		</div>
-        <div class="navbar-textalt navbar-collapse collapse">
-            <span id="header_message_1center">{{message}}</span>
+        <div class="navbar-text xnavbar-collapse xcollapse center-block text-center">
+            <p id="header_message_1center" class="text-center">{{message_1center}}</p>
         </div><!--/.navbar-collapse -->
         <div class="navbar-textalt navbar-collapse collapse pull-right">
-            <span id="header_pagename"class="block-color-featuretext">{{pageName}}</span>
+            <span id="header_pagename" class="block-color-featuretext">{{pageName}}</span>
         </div><!--/.navbar-collapse -->
     </div>
-    <div class="container-fluid xblock-grid-row block-color-header">
-        <!--div class="xblock block-grid-row-first"-->
+    <div class="container-fluid block-color-header">
         <span id="header_message_2left">{{message_2left}}</span>
         <span id="header_message_2right" class="pull-right">{{message_2right}}</span>
-        <!--/div-->
     </div>
 </div>
+--}}
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+    <div class="nav navbar-nav header-center-text" style="padding-top:10px;color:#fff;font-size:17px;">
+        <p id="header_message_1center" class="text-center">{{message_1center}}</p>
+    </div>
+    <div class="navbar-header">
+    {{#if linkTo}}
+        {{#link-to linkTo classNames="navbar-brand"}}
+            <img alt="GoDeep Mobile" src="assets/img/logo.png">
+        {{/link-to}}
+    {{else}}
+        {{#link-to 'dashboard' classNames="navbar-brand"}}
+            <img alt="GoDeep Mobile" src="assets/img/logo.png">
+        {{/link-to}}
+    {{/if}}
+    </div>
+    <div class="navbar-collapse collapse">
+        <div class="nav navbar-nav pull-right" style="padding-top:10px;font-size:17px;">
+            <span id="header_pagename" class="block-color-featuretext">{{pageName}}</span>
+            <button type="button" class="btn">
+                hamburger
+            </button>
+        </div>
+    </div>
+        </div>
+    <div class="container-fluid block-color-header">
+        <span id="header_message_2left">{{message_2left}}</span>
+        <span id="header_message_2right" class="pull-right">{{message_2right}}</span>
+    </div>
+</nav>

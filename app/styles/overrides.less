@@ -12,8 +12,39 @@
 @btn-gd-menu-color: #fff;
 @btn-gd-menu-border: #000;
 
+
+
+.header-center-text
+{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  margin: auto;
+  background-color: transparent;
+  cursor: inherit;
+}
+.navbar-header {
+  position:relative;
+}
+
+
+// fix 1 pixel problem
+*::before {
+  margin-left:-1px;
+}
+*::after {
+  margin-right:-1px;
+}
+
 .navbar-inverse {
   background-color:#1c1c1c;
+}
+.red {
+  background-color: red;
+}
+.yellow {
+  background-color: yellow;
 }
 
 .hamburger {
@@ -199,20 +230,15 @@ span.navbar-text {
 }
 
 .navbar-btn {
-  .line1 {
+  span:nth-child(1) {
     display:block;
     margin-top:20px;
-    margin-left:-32px;
-    margin-right:-32px;
     font-size: 17px;
     line-height:20px;
     text-align: center;
   }
-  .line2 {
+  span:nth-child(2) {
     display:block;
-    //margin-top:10px;
-    margin-left:-32px;
-    margin-right:-32px;
     margin-bottom:20px;
     font-size: 17px;
     line-height:20px;
@@ -524,6 +550,9 @@ span.navbar-text {
 
 .block-center {
   float:none;
+}
+.flex {
+  display:flex;
 }
 
 .block-color-heading1 {

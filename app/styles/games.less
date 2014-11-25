@@ -65,3 +65,130 @@
   }
 }
 
+@color-header1: #838383;
+@color-header2: #0e3779;
+@color-header3: #091A3D;
+@color-header4: #030523;
+@color-header5: @color-header1;
+@color-column1: #838383;
+@color-column2: #7493B9;
+@color-column3: #707F95;
+@color-column4: #6D6D84;
+@color-column5: @color-header5;
+
+.row-separator {
+  border-bottom: 2px solid black;
+  padding-bottom:10px;
+}
+.row-separator+.row-separator {
+  padding-top:10px;
+}
+
+.game-column {
+position:relative;
+  height:80px;
+  display:flex;
+  padding:5px;
+  border:0;
+  outline:0;
+  color:#fff;
+  font-size:17px ;
+  line-height: 17px;
+  font-weight: 700;
+  text-align:center;
+  margin:0;
+  span,p {
+    display: block;
+    width:100%;
+    overflow:hidden;
+  }
+}
+.game-column+.game-column {
+  margin-left:10px;
+}
+.game-header1 {
+	background-color:@color-header1;
+  width:25%;
+  text-align:left;
+  font-weight: normal;
+}
+.game-column1 {
+  background-color:@color-header1;
+  width:25%;
+  text-align:left;
+  font-weight: normal;
+  span:nth-child(1) {
+    position:absolute;
+    top:5px;
+    left:5px;
+    font-weight:normal;
+    font-size: 20px;
+    width:100%;
+  }
+  span:nth-child(2) {
+    position:absolute;
+    bottom:5px;
+    left:5px;
+    font-weight:normal;
+  }
+  span:nth-child(3) {
+    position:absolute;
+    bottom:0px;
+    right:5px;
+    font-weight: bolder;
+    font-size: 41px;
+    line-height:41px;
+    text-align: right;
+    background-color: transparent;
+    width:50%;
+  }
+}
+
+.game-header2 {
+	background-color:@color-header2;
+  width:22%;
+}
+.game-column2 {
+  background-color:@color-column2;
+  width:22%;
+}
+
+.game-header3 {
+	background-color:@color-header3;
+  width:22%;
+}
+.game-column3 {
+  background-color:@color-column3;
+  width:22%;
+}
+
+.game-header4 {
+	background-color:@color-header4;
+  width:22%;
+}
+.game-column4 {
+  background-color:@color-column4;
+  width:22%;
+}
+
+.game-header5 {
+	background-color:@color-header5;
+  width:9%;
+  text-align:center;
+  font-weight: normal;
+}
+.game-column5 {
+  background-color:@color-column5;
+  width:9%;
+  text-align:center;
+  font-weight: normal;
+  padding:0;
+  span {
+    position:absolute;
+    top:20px;
+    font-weight:normal;
+    width:100%;
+  }
+}
+
+

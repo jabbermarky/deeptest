@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
-    pageName:'',
-    message_1center:'',
-    message_2left:'',
-    message_2right:'',
+    pageName:'pagename',
+    message_1center:'center',
+    message_2left:'2left',
+    message_2right:'2right',
     linkTo:'dashboard',
     setLinkTo: function(m) {
         this.set('linkTo', m);

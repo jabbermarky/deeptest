@@ -5,6 +5,7 @@ export default Ember.Route.extend({
         didTransition: function() {
             var header = this.controllerFor('header');
             header.setPageName('Grade Players');
+            header.setMessage('');
             header.setMessage2Left('');
             header.setMessage2Right('');
             return true; // Bubble the didTransition event

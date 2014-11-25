@@ -17,9 +17,6 @@ export default Ember.Route.extend({
             header.setMessage2Left('');
             header.setMessage2Right('');
             return true; // Bubble the didTransition event
-        },
-        changePlayType: function() {
-            console.log('changePlayType');
         }
     }
 });

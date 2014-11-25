@@ -108,13 +108,13 @@ position:relative;
 }
 .game-header1 {
 	background-color:@color-header1;
-  width:25%;
+  width:29%;
   text-align:left;
   font-weight: normal;
 }
 .game-column1 {
   background-color:@color-header1;
-  width:25%;
+  width:29%;
   text-align:left;
   font-weight: normal;
   span:nth-child(1) {
@@ -146,40 +146,40 @@ position:relative;
 
 .game-header2 {
 	background-color:@color-header2;
-  width:22%;
+  width:21%;
 }
 .game-column2 {
   background-color:@color-column2;
-  width:22%;
+  width:21%;
 }
 
 .game-header3 {
 	background-color:@color-header3;
-  width:22%;
+  width:21%;
 }
 .game-column3 {
   background-color:@color-column3;
-  width:22%;
+  width:21%;
 }
 
 .game-header4 {
 	background-color:@color-header4;
-  width:22%;
+  width:21%;
 }
 .game-column4 {
   background-color:@color-column4;
-  width:22%;
+  width:21%;
 }
 
 .game-header5 {
 	background-color:@color-header5;
-  width:9%;
+  width:8%;
   text-align:center;
   font-weight: normal;
 }
 .game-column5 {
   background-color:@color-column5;
-  width:9%;
+  width:8%;
   text-align:center;
   font-weight: normal;
   padding:0;
@@ -191,4 +191,51 @@ position:relative;
   }
 }
 
+.container-fluid.game-footer {
+    padding: 10px;
+}
+.game-footer {
+  .btn-group {
+    width: 100%;
+  }
+  .btn-group {
+    padding:0;
+    .btn {
+      width:20%;
+      margin:0;
+      padding:0;
+    }
+    .btn + .btn {
+      margin-left: 6.667%;
+    }
+  }
+}
+
+
+.game-menu {
+  overflow: hidden;
+  position: absolute;
+  top: -203px;
+  right: -200px;
+  z-index: 0;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  border:2px solid #000;
+  display:none;
+
+}
+
+// visible menu is at left = 0
+.game-menu.visible {
+  display:inline-block;
+  top:80px;
+  right:0;
+}
+
+// transition menu on click
+.game-menu {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
 

@@ -4,9 +4,9 @@
 <nav class="navbar xnavbar-inverse navbar-button-row" role="navigation">
     <div class="container-fluid block-color-header">
         <div>
-            {{#header-button class='navbar-btn btn-narrow navbar-left' action="previousPlay"}}◀︎{{/header-button}}
+            {{#header-button class='navbar-btn btn-narrow navbar-left' action="gamePreviousPlay"}}◀︎{{/header-button}}
             <p class="navbar-text">{{playNumber}}</p>
-            {{#header-button class='navbar-btn btn-narrow navbar-left' action="nextPlay"}}►{{/header-button}}
+            {{#header-button class='navbar-btn btn-narrow navbar-left' action="gameNextPlay"}}►{{/header-button}}
         </div>
         <div class="navbar-text">
             <span class="block-line1e">
@@ -16,7 +16,7 @@
             </span>
             <span class="block-line1f"><b>Formation:</b> [field value]</span>
             <span class="block-line1f"><b>Backfield:</b> [field value]</span>
-            <span class="block-line1f"><b>Play:</b> [play call] [play type]</span>
+            <span class="block-line1f" {{bind-attr class="playChanged:block-yellow-hiliter"}}><b>Play:</b> [play call] {{playType}}</span>
         </div>
         <div class="navbar-text">
             <span class="block-line1e">
@@ -33,10 +33,16 @@
             <span class="block-line1f"><b>Cover:</b> [coverage]</span>
         </div>
         <div class="navbar-right">
-            {{#header-button class='navbar-btn btn-narrow' action="changePlayType"}}
+            {{#header-button class='navbar-btn btn-narrow' action="gameChangePlayType"}}
                 <span xclass="line1">change</span>
                 <span xclass="line2">play type</span>
             {{/header-button}}
+        </div>
+        <div class="game-menu btn-group-vertical" {{bind-attr class="menuVisible:visible"}} role="group" aria-label="change play type menu">
+            {{#menu-button action="gameChangePlayTo" param="kick" }}kick/punt{{/menu-button}}
+            {{#menu-button action="gameChangePlayTo" param="penalty-no-play"   }}penalty - no play{{/menu-button}}
+            {{#menu-button action="gameChangePlayTo" param="penalty-offense" }}penalty - offense{{/menu-button}}
+            {{#menu-button action="gameChangePlayTo" param="penalty-defense"   }}penalty - defense{{/menu-button}}
         </div>
     </div>
 </nav>
@@ -98,8 +104,75 @@
             <span>point of attack</span>
         </div>
     </div>
+    <div class="row flex  row-separator">
+        <div class="game-column game-column1">
+            <span>QB</span>
+            <span>Podzuluzinski, J.</span>
+            <span>12</span>
+        </div>
+        <div class="game-column game-column2">
+            <span></span>
+        </div>
+        <div class="game-column game-column3">
+            <span></span>
+        </div>
+        <div class="game-column game-column4">
+            <span></span>
+        </div>
+        <div class="game-column game-column5">
+            <span>point of attack</span>
+        </div>
+    </div>
+    <div class="row flex  row-separator">
+        <div class="game-column game-column1">
+            <span>QB</span>
+            <span>Podzuluzinski, J.</span>
+            <span>12</span>
+        </div>
+        <div class="game-column game-column2">
+            <span></span>
+        </div>
+        <div class="game-column game-column3">
+            <span></span>
+        </div>
+        <div class="game-column game-column4">
+            <span></span>
+        </div>
+        <div class="game-column game-column5">
+            <span>point of attack</span>
+        </div>
+    </div>
+    <div class="row flex  row-separator">
+        <div class="game-column game-column1">
+            <span>QB</span>
+            <span>Podzuluzinski, J.</span>
+            <span>12</span>
+        </div>
+        <div class="game-column game-column2">
+            <span></span>
+        </div>
+        <div class="game-column game-column3">
+            <span></span>
+        </div>
+        <div class="game-column game-column4">
+            <span></span>
+        </div>
+        <div class="game-column game-column5">
+            <span>point of attack</span>
+        </div>
+    </div>
 </div>
 
+<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="container-fluid game-footer">
+        <div class="btn-group" role="group" aria-label="Footer Menu">
+            {{#menu-button action="gamePreviousPlay" }}◀ go back{{/menu-button}}
+            {{#menu-button action="gamePauseGrading"   }}pause grading{{/menu-button}}
+            {{#menu-button action="gameNotes" }}add notes{{/menu-button}}
+            {{#menu-button action="gameNextPlay"   }}continue ►{{/menu-button}}
+        </div>
+    </div>
+</nav>
 {{!--
 {{#header-button class='navbar-btn navbar-left' }}button 1{{/header-button}}
 {{#header-button class='navbar-btn navbar-left' }}button 2{{/header-button}}

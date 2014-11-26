@@ -3,11 +3,11 @@ import Ember from 'ember';
 export default Ember.Route.extend({
     afterModel: function(game) {
         var header = this.controllerFor('header');
-        var message = game.get('visitorTeam') + ' '
-                    + game.get('visitorScore') + ' @ '
-                    + game.get('homeTeam') + ' '
-                    + game.get('homeScore') + ' ('
-                    + game.get('date') + ')';
+        var message = game.get('visitorTeam') + ' ' +
+                      game.get('visitorScore') + ' @ ' +
+                      game.get('homeTeam') + ' ' +
+                      game.get('homeScore') + ' (' +
+                      game.get('date') + ')';
         header.setMessage(message);
     },
     actions: {

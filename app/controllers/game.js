@@ -13,8 +13,9 @@ export default Ember.ObjectController.extend({
         },
         gamePreviousPlay: function() {
             var playNumber = this.get('playNumber');
-            if (playNumber > 1)
-                this.set('playNumber',playNumber - 1);
+            if (playNumber > 1) {
+                this.set('playNumber', playNumber - 1);
+            }
             console.log('previousPlay');
         },
         gameChangePlayType: function() {
@@ -23,11 +24,9 @@ export default Ember.ObjectController.extend({
         },
         gameGoBack: function() {
             console.log('gameGoBack');
-            gamePreviousPlay();
         },
         gameContinue: function() {
             console.log('gameContinue');
-            gameNextPlay();
         },
         gameNotes: function() {
             console.log('gameNotes');

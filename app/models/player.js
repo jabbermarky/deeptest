@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import DS from 'ember-data';
 
 var attr = DS.attr;
@@ -46,21 +47,22 @@ var Player = DS.Model.extend({
     gameStats: hasMany('gameStat',{async:true}),
 
     classYr: function() {
-        if (this.get('classYear') === 'Freshman') return 'FR';
-        if (this.get('classYear') === 'Sophomore') return 'SO';
-        if (this.get('classYear') === 'Junior') return 'JR';
-        if (this.get('classYear') === 'Senior') return 'SR';
+        var classYear = this.get('classYear');
+        if (classYear === 'Freshman')  { return 'FR';}
+        if (classYear === 'Sophomore') { return 'SO';}
+        if (classYear === 'Junior')    { return 'JR';}
+        if (classYear === 'Senior')    { return 'SR';}
     }.property('classYear'),
 
     currentSeasonStats: function() {
-        var seasonStats = this.get('seasonStats');
+        //var seasonStats = this.get('seasonStats');
         var seasonStatsLength = this.get('seasonStats.length');
-        if (seasonStatsLength == 1) {
+        if (seasonStatsLength === 1) {
             console.log('currentSeasonStats first Object');
             console.log(this.get('seasonStats.content.firstObject'));
             return this.get('seasonStats.firstObject');
         }
-        if (seasonStatsLength == 0) {
+        if (seasonStatsLength === 0) {
             console.log('currentSeasonStats is empty');
             return null;
         }
@@ -70,25 +72,24 @@ var Player = DS.Model.extend({
         return this.get('classYear') === 'Freshman';
     }.property('classYear'),
 
-    lastGameAvgGrade: function() {
-        var stats = this.get('gameStats');
-        var length = this.get('gameStats.length');
-        if (length) {
-            return stats.get('content.lastObject.overallGrade');
-        } else {
-            return 0;
-        }
+    lastGame: function() {
+        var promise = this.get('gameStats').then(function(stats) {
+            if (stats.get('length')) {
+                return stats.get('content.lastObject');
+            } else {
+                return null;
+            }
+        }, function() {
+            return null;
+        });
+
+        return DS.PromiseObject.create({
+            promise: promise
+        });
     }.property('gameStats.length'),
 
-    lastGameNumPlays: function() {
-        var stats = this.get('gameStats');
-        var length = this.get('gameStats.length');
-        if (length) {
-            return stats.get('content.lastObject.numPlays');
-        } else {
-            return 0;
-        }
-    }.property('gameStats.length'),
+    lastGameAvgGrade: Ember.computed.oneWay('lastGame.overallGrade'),
+    lastGameNumPlays: Ember.computed.oneWay('lastGame.numPlays'),
 
     seasonNumGames: function() {
         return this.get('gameStats.length');

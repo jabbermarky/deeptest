@@ -52,6 +52,7 @@ export default Ember.Route.extend({
         didTransition: function() {
             var header = this.controllerFor('header');
             header.setPageName('Dashboard');
+            header.setMessage('');
             header.setMessage2Left('12/12/14'); //set today's date
             header.setMessage2Right('Welcome {{username}}, {{teamname}}');
             return true; // Bubble the didTransition event

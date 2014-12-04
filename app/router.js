@@ -29,6 +29,7 @@ Router.map(function() {
     // for dashboards
     this.route('dashboard', { path: '/dashboard'});
     this.route('dashboard/topNewPlayers');
+    this.route('dashboard/veteranWatchList');
 
     // for player management
     this.route("players",   { path: '/players' });

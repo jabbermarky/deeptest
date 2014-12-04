@@ -1,16 +1,3 @@
-@border-radius-base:        0px;
-@border-radius-large:       0px;
-@border-radius-small:       0px;
-
-@padding-xlarge-vertical:    0px;
-@padding-xlarge-horizontal:  32px;
-@line-height-xlarge:         80px;
-//@font-size-xlarge:         ceil((@font-size-base * 1.5)); // ~18px
-@font-size-xlarge:         17px;
-
-@btn-gd-menu-bg: #4a4a4a;
-@btn-gd-menu-color: #fff;
-@btn-gd-menu-border: #000;
 
 
 
@@ -24,6 +11,7 @@
   background-color: transparent;
   cursor: inherit;
 }
+
 .navbar-header {
   position:relative;
 }
@@ -37,9 +25,6 @@
   margin-right:-1px;
 }
 
-.navbar-inverse {
-  background-color:#1c1c1c;
-}
 .red {
   background-color: red;
 }
@@ -54,7 +39,8 @@
 .btn-xl {
   // line-height: ensure even-numbered height of button next to large input
   .button-size(@padding-xlarge-vertical; @padding-xlarge-horizontal; @font-size-xlarge; @line-height-xlarge; @border-radius-large);
-  border-width: 0;
+  border-width: 3px;
+  font-weight: 200;
 }
 .btn-narrow {
   padding-left:10px;
@@ -65,11 +51,20 @@
   .button-variant(@btn-gd-menu-color; @btn-gd-menu-bg; @btn-gd-menu-border);
   &:hover,
   &:focus {
-    background-color: #4888EF;
-    color:#fff;
+    background-color: @btn-active-hover-bg;
+    color:@btn-active-hover-color;
     text-decoration: none;
+    border-color: lighten(@btn-active-hover-bg,10%);
   }
 }
+.btn-gd-menu-alt {
+  border-color: #393939;
+  &:hover,
+  &:focus {
+    border-color: darken(@btn-active-hover-bg,10%);
+  }
+}
+
 .btn-group-vertical {
   >.btn+.btn {  // only put top border on 2nd and later buttons
     border-top-width:2px;
@@ -148,7 +143,7 @@ body {
 	box-sizing: border-box;
 	color: #FFF;
 	display:block;
-	font-family:balanceweb, Arial;
+	//font-family:balanceweb, Arial;
 	font-size:24px;                    /* set this with a modifier */
 	//font-size:4.8vw;
     height: 60px;
@@ -172,14 +167,14 @@ body {
 
   &:hover,
   &:focus {
-    background-color: #4888EF;
-    color:#fff;
+    background-color: @btn-active-hover-bg;
+    color:@btn-active-hover-color;
     text-decoration: none;
   }
   @media (min-width: 768px) { //992px, 1200px
     font-size:24px;                    /* set this with a modifier */
-    line-height:80px;                   /* set this with a modifier */
-    height: 80px;
+    line-height:@page-header-height;                   /* set this with a modifier */
+    height: @page-header-height;
   }
 }
 .button-new {
@@ -189,14 +184,14 @@ body {
 @media (min-width: 768px) { //992px, 1200px
   .button-new {
     font-size:24px;                    /* set this with a modifier */
-    line-height:80px;                   /* set this with a modifier */
-    height: 80px;
+    line-height:@page-header-height;                   /* set this with a modifier */
+    height: @page-header-height;
   }
 }
 
 .block-grid-row {
   display:block;
-  height:80px;
+  height:@page-header-height;
   //height:8vw;
 
   .block-grid-row-last {
@@ -232,14 +227,14 @@ span.navbar-text {
 .navbar-btn {
   span:nth-child(1) {
     display:block;
-    margin-top:20px;
+    margin-top:17px;
     font-size: 17px;
     line-height:20px;
     text-align: center;
   }
   span:nth-child(2) {
     display:block;
-    margin-bottom:20px;
+    margin-bottom:17px;
     font-size: 17px;
     line-height:20px;
     text-align: center;
@@ -247,10 +242,11 @@ span.navbar-text {
 }
 
 .navbar-text {
-  font-family: balanceweb, Arial;
+  //font-family: balanceweb, Arial;
   font-size: 17px;
   height:55px;
-  margin-top:25px;                      // height + margin-top + margin-bottom= 80px
+  margin-top:25px;                          // height + margin-top + margin-bottom= page-header-height
+  margin-top:(@page-header-height - 55px);
   margin-bottom:0;
   margin-left:0;
   margin-right:0;
@@ -382,7 +378,7 @@ span.navbar-text {
   -webkit-font-smoothing:antialiased;
   box-sizing: border-box;
   display:block;
-  font-family:balanceweb, Arial;
+  //font-family:balanceweb, Arial;
   font-weight:bold;
 
   //outline-color:#FFF;
@@ -399,13 +395,11 @@ span.navbar-text {
   //margin-right:.5vw;
   position:relative;
 
-  height: 80px;                         /* set this with a modifier */
-  //height: 16vw;
-  //width:215px;                        /* set this with a modifier */
-  background-color: #4a4a4a;
-  color: #FFF;                          /* set this with a modifier */
+  height: @page-header-height;                         /* set this with a modifier */
+  background-color: @block-bg;
+  color: @block-color;                          /* set this with a modifier */
   font-size: 28px;                      /* set this with a modifier */
-  line-height:80px;                     /* set this with a modifier */
+  line-height:@page-header-height;                     /* set this with a modifier */
   //line-height:8vw;
   span {
     //margin-right:10px;
@@ -596,11 +590,12 @@ span.navbar-text {
 }
 
 .block-active {
-  background-color: #4888EF;
+  background-color: @btn-active-hover-bg;
+  color: @btn-active-hover-color
 }
 
 .block-color-featuretext {
-  color: #4888EF;
+  color: @btn-active-hover-bg;
 }
 
 //
@@ -628,7 +623,7 @@ span.navbar-text {
 }
 
 .container-button-row {
-  padding-top:80px;
+  padding-top:@page-header-height;
   //padding-top:110px;  // with row for Today's date
 }
 

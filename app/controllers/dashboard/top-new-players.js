@@ -2,10 +2,17 @@ import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
     caption:'Top New Players',
+    linkToUrl: 'dashboard/topNewPlayers',
     sortProperties: ['overallGrade'],
     sortAscending: false,
-    filteredContent: function() {
+    top5Players: function() {
         return this.get('arrangedContent').slice(0,5);
+    }.property('arrangedContent.[]'),
+    allPlayers: function() {
+        return this.get('arrangedContent');
+    }.property('arrangedContent.[]'),
+    top10Players: function() {
+        return this.get('arrangedContent').slice(0,10);
     }.property('arrangedContent.[]')
 });
 /*

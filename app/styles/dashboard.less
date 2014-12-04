@@ -4,7 +4,7 @@
 
 @dashboard-blue-bg: #0a254e;
 @dashboard-gray-bg: #1c1c1c;
-@dashboard-blue-panel:#0e3779;
+@dashboard-top5-panel:@btn-gd-menu-bg;
 @dashboard-header1:#838383;
 @dashboard-header2:#838383;
 @dashboard-header3:#0e3779;
@@ -16,14 +16,42 @@
 @dashboard-jersey-color:#030523;
 
 
-.dashboard-blue-panel {
-  background-color: @dashboard-blue-panel;
+.dashboard-top5-panel {
+  background-color: @dashboard-top5-panel;
   color:#fff;
   padding-left:10px;
   padding-right:15px;
   padding-top:5px;
-  //padding-bottom:5px;
   margin-bottom: 15px;
+  border:3px solid @btn-gd-menu-border;
+  div {
+    margin-top:10px;
+    margin-bottom:10px;
+    &:hover,
+    &:focus {
+      color:@btn-active-hover-color;
+      background-color: @btn-active-hover-bg;
+      text-decoration: none;
+      cursor:pointer;
+    }
+  }
+  span {
+    font-size: 18px;
+    margin-top:5px;
+    margin-bottom:5px;
+  }
+    a {
+      color:#fff;
+      &:hover,
+      &:focus {
+        color:#fff;
+        text-decoration: none;
+        cursor:pointer;
+      }
+    }
+    a:link {
+      text-decoration: none;
+    }
 }
 
 .dashboard-color-header1 {
@@ -103,7 +131,7 @@
   }
   > .btn-group-vertical > .btn {
     margin-top:20px;
-    border-bottom-width:0;
+    //border-bottom-width:0;
   }
 
   z-index: 2; //slide-out menu will be < 2
@@ -129,6 +157,7 @@
   .make-md-column(3);
   .make-sm-column(3);
   background-color: @dashboard-blue-bg;
+  background-color: @dashboard-gray-bg;
   color:#fff;
   height:100%;
   padding-top:15px;
@@ -279,7 +308,7 @@
   > tbody > tr:hover {
     > td,
     > th {
-      background-color: #4888EF;
+      background-color: @btn-active-hover-bg;
       cursor:pointer;
     }
   }
@@ -300,7 +329,7 @@
   text-align:center;
 /*  &:hover,
   &:focus {
-    background-color: #4888EF;
+    background-color: @btn-active-hover-bg;
     color:#fff;
     text-decoration: none;
     cursor:pointer;

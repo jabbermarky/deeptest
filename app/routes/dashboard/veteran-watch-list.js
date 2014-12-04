@@ -5,13 +5,13 @@ export default Ember.Route.extend({
         return this.store.find('seasonStat');
     }.property(),
 
-    newStats: Ember.computed.filterBy('allStats', 'player.isNewPlayer', true),
+    vetStats: Ember.computed.filterBy('allStats', 'player.isNewPlayer', false),
 
     renderTemplate: function() {
-        console.log('dashboard/top-new-players route()');
+        console.log('dashboard/veteran-watch-list route()');
         this.render('dashboard/top-players', {  // template to render
-            controller:'dashboard/top-new-players',
-            model:this.get('newStats')
+            controller:'dashboard/veteran-watch-list',
+            model:this.get('vetStats')
 
         });
     },

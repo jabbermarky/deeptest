@@ -20,3 +20,5 @@ testem.log
 # JetBrains IntelliJ IDEA editor files
 /.idea
 /godeeptest.iml
+
+ember.bak

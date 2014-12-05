@@ -13,47 +13,47 @@
 </div>
 
 {{! this page uses a button row in the navbar. modify container with navbar-button-row for proper button spacing}}
-<div class='container-fluid container-players players' style="margin:10px;">
+<div class='container-fluid container-players'>
     <div class="row flex  row-separator">
-        <div class="players-column players-header1">
+        <div class="column header1">
             <span>Click player to see grades and reports</span>
         </div>
-        <div class="players-column players-header2">
+        <div class="column header2">
             <span>1st String</span>
         </div>
-        <div class="players-column players-header3">
+        <div class="column header3">
             <span>2nd String</span>
         </div>
-        <div class="players-column players-header4">
+        <div class="column header4">
             <span>3rd String</span>
         </div>
-        <div class="players-column players-header5">
+        <div class="column header5">
             <span>ST Pos</span>
         </div>
-        <div class="players-column players-header6">
+        <div class="column header6">
             <span>Inactive Flag</span>
         </div>
     </div>
     {{#each allPlayers}}
     <div class="row flex  row-separator">
-        <div class="players-column players-column1" {{action 'playersShowPlayer' this}}>
-            <span class="player-name">{{shortNameInitialLast}}</span>
-            <span class="player-stats">6'4&nbsp;&nbsp;&nbsp;220&nbsp;&nbsp;85%&nbsp;&nbsp;(21)</span>
-            <span class="jersey-number">{{jerseyNumber}}</span>
+        <div class="column column1" {{action 'playersShowPlayer' this}}>
+            <span class="players-name">{{shortNameInitialLast}}</span>
+            <span class="players-stats">6'4&nbsp;&nbsp;&nbsp;220&nbsp;&nbsp;85%&nbsp;&nbsp;(21)</span>
+            <span class="players-jersey-number">{{jerseyNumber}}</span>
         </div>
-        <div class="players-column players-column2">
+        <div class="column column2">
             <span>{{position}}</span>
         </div>
-        <div class="players-column players-column3">
+        <div class="column column3">
             <span></span>
         </div>
-        <div class="players-column players-column4">
+        <div class="column column4">
             <span></span>
         </div>
-        <div class="players-column players-column5">
+        <div class="column column5">
             <span></span>
         </div>
-        <div class="players-column players-column6">
+        <div class="column column6">
             <span>add flag w reason</span>
         </div>
     </div>

@@ -15,7 +15,7 @@ export default Ember.ArrayController.extend({
     allPlayers: function() {
         return this.get('arrangedContent');
     }.property('arrangedContent.[]'),
-    setFlags: function() {
+    setSortFlags: function() {
         var sortOrder = this.get('sortOrder');
         this.set('sortAlpha', false);
         this.set('sortNumerical', false);
@@ -40,17 +40,17 @@ export default Ember.ArrayController.extend({
         playersAlphabetical: function () {
             console.log('playersAlphabetical');
             this.set('sortOrder', 'alpha');
-            this.setFlags();
+            this.setSortFlags();
         },
         playersNumerical: function () {
             console.log('playersNumerical');
             this.set('sortOrder', 'numerical');
-            this.setFlags();
+            this.setSortFlags();
         },
         playersGroupByPosition: function () {
             console.log('playersGroupByPosition');
             this.set('sortOrder', 'position');
-            this.setFlags();
+            this.setSortFlags();
         }
     }
 });

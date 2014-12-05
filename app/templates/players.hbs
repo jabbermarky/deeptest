@@ -36,13 +36,11 @@
     </div>
     {{#each allPlayers}}
     <div class="row flex  row-separator">
-        {{#link-to "player" this tagName="div" class="players-column players-column1"}}
-        <!--div class="players-column players-column1" -->
-            <span>{{shortNameInitialLast}}</span>
-            <span>6'4&nbsp;&nbsp;&nbsp;220&nbsp;&nbsp;85%&nbsp;&nbsp;(21)</span>
-            <span>{{jerseyNumber}}</span>
-        <!--/div-->
-        {{/link-to}}
+        <div class="players-column players-column1" {{action 'playersShowPlayer' this}}>
+            <span class="player-name">{{shortNameInitialLast}}</span>
+            <span class="player-stats">6'4&nbsp;&nbsp;&nbsp;220&nbsp;&nbsp;85%&nbsp;&nbsp;(21)</span>
+            <span class="jersey-number">{{jerseyNumber}}</span>
+        </div>
         <div class="players-column players-column2">
             <span>{{position}}</span>
         </div>

@@ -33,6 +33,10 @@ export default Ember.ArrayController.extend({
         }
     },
     actions: {
+        playersShowPlayer: function(player) {
+            console.log('playersShowPlayer %O',player);
+            this.transitionToRoute('player', player);
+        },
         playersAlphabetical: function () {
             console.log('playersAlphabetical');
             this.set('sortOrder', 'alpha');

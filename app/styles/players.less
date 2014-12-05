@@ -16,6 +16,10 @@
 @players-color-column5: @players-color-header5;
 @players-color-column6: @players-color-column1;
 
+@players-column1-width:40%;
+@players-column2-n-width:12%;
+@players-row-height:80px;
+
 .container-players {
     padding-top:@page-header-height;
     padding-bottom:90px;
@@ -24,7 +28,7 @@
 
 .players-column {
     position:relative;
-    height:80px;
+    height:@players-row-height;
     display: -webkit-flex;
     display:flex;
     padding:5px;
@@ -45,8 +49,7 @@
 .players-column+.players-column {
     margin-left:10px;
 }
-@players-column1-width:40%;
-@players-column2-n-width:12%;
+
 .players-header1 {
     background-color:@players-color-header1;
     width:@players-column1-width;
@@ -60,7 +63,8 @@
     text-align:left;
     font-weight: normal;
     border: 3px solid #393939;
-    span:nth-child(1) {
+    //span:nth-child(1) {
+    span.player-name {
         position:absolute;
         top:5px;
         left:5px;
@@ -68,13 +72,15 @@
         font-size: 20px;
         width:100%;
     }
-    span:nth-child(2) {
+    //span:nth-child(2) {
+    span.player-stats {
         position:absolute;
         bottom:5px;
         left:5px;
         font-weight:normal;
     }
-    span:nth-child(3) {
+    //span:nth-child(3) {
+    span.jersey-number {
         position:absolute;
         bottom:0px;
         right:5px;

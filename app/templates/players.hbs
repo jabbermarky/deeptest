@@ -1,59 +1,61 @@
 {{render "header"}}
 {{! this page uses a button row in the navbar. modify navbar with navbar-button-row for proper button spacing}}
-<div class="navbar navbar-button-row">
-    <div class="container-fluid block-grid-row block-color-header">
+<div class="navbar navbar-button-row" role="navigation">
+    <div class="container-fluid block-color-header">
         {{#header-button class='navbar-btn btn-narrow navbar-left' action="goBack"}}◀︎{{/header-button}}
-        <span class="navbar-text">team name - season</span>
+        <span class="navbar-text">{{team}} - {{season}}</span>
         <div class="pull-right" role="group" aria-label="Toolbar">
-            {{#header-button action="createGame"}}alphabetical{{/header-button}}
-            {{#header-button action="createGame"}}numerical{{/header-button}}
-            {{#header-button action="createGame"}}group by position{{/header-button}}
+            {{#header-button action="playersAlphabetical" isActive=sortAlpha}}alphabetical{{/header-button}}
+            {{#header-button action="playersNumerical" isActive=sortNumerical}}numerical{{/header-button}}
+            {{#header-button action="playersGroupByPosition" isActive=sortPosition}}group by position{{/header-button}}
         </div>
     </div>
 </div>
 
 {{! this page uses a button row in the navbar. modify container with navbar-button-row for proper button spacing}}
-<div class='container-fluid container-game game' style="margin:10px;">
+<div class='container-fluid container-players players' style="margin:10px;">
     <div class="row flex  row-separator">
-        <div class="game-column game-header1">
-            <span>Click players to select/change</span>
+        <div class="players-column players-header1">
+            <span>Click player to see grades and reports</span>
         </div>
-        <div class="game-column game-header2">
+        <div class="players-column players-header2">
             <span>1st String</span>
         </div>
-        <div class="game-column game-header3">
+        <div class="players-column players-header3">
             <span>2nd String</span>
         </div>
-        <div class="game-column game-header4">
+        <div class="players-column players-header4">
             <span>3rd String</span>
         </div>
-        <div class="game-column game-header5">
+        <div class="players-column players-header5">
             <span>ST Pos</span>
         </div>
-        <div class="game-column game-header6">
+        <div class="players-column players-header6">
             <span>Inactive Flag</span>
         </div>
     </div>
     {{#each allPlayers}}
     <div class="row flex  row-separator">
-        <div class="game-column game-column1">
-            <span>{{position}}</span>
-            <span>{{fullName}}</span>
+        {{#link-to "player" this tagName="div" class="players-column players-column1"}}
+        <!--div class="players-column players-column1" -->
+            <span>{{shortNameInitialLast}}</span>
+            <span>6'4&nbsp;&nbsp;&nbsp;220&nbsp;&nbsp;85%&nbsp;&nbsp;(21)</span>
             <span>{{jerseyNumber}}</span>
+        <!--/div-->
+        {{/link-to}}
+        <div class="players-column players-column2">
+            <span>{{position}}</span>
         </div>
-        <div class="game-column game-column2">
+        <div class="players-column players-column3">
             <span></span>
         </div>
-        <div class="game-column game-column3">
+        <div class="players-column players-column4">
             <span></span>
         </div>
-        <div class="game-column game-column4">
+        <div class="players-column players-column5">
             <span></span>
         </div>
-        <div class="game-column game-column5">
-            <span></span>
-        </div>
-        <div class="game-column game-column6">
+        <div class="players-column players-column6">
             <span>add flag w reason</span>
         </div>
     </div>

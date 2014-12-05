@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
     tagName: 'button',
     classNames: ['btn btn-gd-menu btn-xl btn-header'],
+    classNameBindings: ['isActive:active'],
     attributeBindings: ['type'],
     type: "button",
     click: function() {

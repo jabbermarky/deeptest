@@ -46,11 +46,11 @@
   padding-left:10px;
   padding-right:10px;
 }
-// Success appears as green
 .btn-gd-menu {
   .button-variant(@btn-gd-menu-color; @btn-gd-menu-bg; @btn-gd-menu-border);
   &:hover,
-  &:focus {
+  &:focus,
+  &.active {
     background-color: @btn-active-hover-bg;
     color:@btn-active-hover-color;
     text-decoration: none;
@@ -58,11 +58,14 @@
   }
 }
 .btn-gd-menu-alt {
-  border-color: #393939;
-  &:hover,
-  &:focus {
+    border-color: @btn-gd-menu-lt-border;
+    background-color: @btn-gd-menu-lt-bg;
+    color:@btn-gd-menu-lt-color;
+    &:hover,
+    &:focus,
+    &.active {
     border-color: darken(@btn-active-hover-bg,10%);
-  }
+    }
 }
 
 .btn-group-vertical {

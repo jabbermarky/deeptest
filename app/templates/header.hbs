@@ -1,6 +1,6 @@
 <!--suppress HtmlUnknownTarget -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
+    <div class="container-fluid header-light">
         <div class="nav navbar-nav header-center-text" style="padding-top:10px;color:#fff;font-size:17px;">
             <p id="header_message_1center" class="text-center">{{message_1center}}</p>
         </div>
@@ -31,12 +31,12 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid header-dark">
+    <div class="container-fluid header-dark header-messages">
         <span id="header_message_2left">{{message_2left}}</span>
         <span id="header_message_2right" class="pull-right">{{message_2right}}</span>
     </div>
-    <div class="header-hamburger-menu btn-group-vertical" {{bind-attr class="hamburgerMenuVisible:visible"}} role="group" aria-label="change play type menu">
-        {{#menu-button action="appShowScreenTips" param=screenTipsHandle }}screen tips{{/menu-button}}
-        {{#menu-button action="appSignOff" }}signoff{{/menu-button}}
+    <div class="header-hamburger-menu btn-group-vertical" {{bind-attr class="hamburgerMenuVisible:visible"}} role="group" aria-label="hamburger menu">
+        {{#menu-button class="btn-gd-menu-alt" action="appShowScreenTips" param=screenTipsHandle }}screen tips{{/menu-button}}
+        {{#menu-button class="btn-gd-menu-alt" action="appSignOff" }}signoff{{/menu-button}}
     </div>
 </nav>

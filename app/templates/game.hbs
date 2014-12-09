@@ -39,10 +39,10 @@
             {{/header-button}}
         </div>
         <div class="game-menu btn-group-vertical" {{bind-attr class="menuVisible:visible"}} role="group" aria-label="change play type menu">
-            {{#menu-button action="gameChangePlayTo" param="kick" }}kick/punt{{/menu-button}}
-            {{#menu-button action="gameChangePlayTo" param="penalty-no-play"   }}penalty - no play{{/menu-button}}
-            {{#menu-button action="gameChangePlayTo" param="penalty-offense" }}penalty - offense{{/menu-button}}
-            {{#menu-button action="gameChangePlayTo" param="penalty-defense"   }}penalty - defense{{/menu-button}}
+            {{#menu-button class="btn-gd-menu-alt" action="gameChangePlayTo" param="kick" }}kick/punt{{/menu-button}}
+            {{#menu-button class="btn-gd-menu-alt" action="gameChangePlayTo" param="penalty-no-play"   }}penalty - no play{{/menu-button}}
+            {{#menu-button class="btn-gd-menu-alt" action="gameChangePlayTo" param="penalty-offense" }}penalty - offense{{/menu-button}}
+            {{#menu-button class="btn-gd-menu-alt" action="gameChangePlayTo" param="penalty-defense"   }}penalty - defense{{/menu-button}}
         </div>
     </div>
 </nav>
@@ -51,7 +51,7 @@
 <div class='container-fluid container-game game' style="margin:10px;">
     <div class="row flex  row-separator">
         <div class="game-column game-header1">
-            <span>Click players to select/change</span>
+            <span>Click players below to select for grading on this play</span>
         </div>
         <div class="game-column game-header2">
             <span>Mental Grade</span>

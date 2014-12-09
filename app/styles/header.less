@@ -1,0 +1,310 @@
+//
+// header specific styles
+//
+
+
+.header-dark {
+    color: @header-color-dk;
+    background-color: @header-color-bg-dk;
+}
+.header-light {
+    color: @header-color-lt;
+    background-color: @header-color-bg-lt;
+}
+.header-center-text
+{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: auto;
+    background-color: transparent;
+    cursor: inherit;
+}
+
+.navbar-header {
+    position:relative;
+}
+
+.hamburger {
+    .navbar-toggle;
+}
+
+.navbar {
+    min-height: @page-header-height;
+    margin-bottom:0px;
+    //border-bottom-width: 0px;
+    border:none;
+}
+
+.navbar-btn {
+    margin-bottom:0;
+    margin-top:0;
+}
+
+.btn-header+.btn-header {
+    margin-left:10px;
+}
+
+p.navbar-text,
+span.navbar-text {
+    margin-left:15px;
+    margin-right:15px;
+}
+
+.navbar-btn {
+    span:nth-child(1) {
+        display:block;
+        margin-top:17px;
+        font-size: 17px;
+        line-height:20px;
+        text-align: center;
+    }
+    span:nth-child(2) {
+        display:block;
+        margin-bottom:17px;
+        font-size: 17px;
+        line-height:20px;
+        text-align: center;
+    }
+}
+
+.navbar-text {
+    //font-family: balanceweb, Arial;
+    font-size: 17px;
+    height:55px;
+    margin-top:25px;                          // height + margin-top + margin-bottom= page-header-height
+    margin-top:(@page-header-height - 55px);
+    margin-bottom:0;
+    margin-left:0;
+    margin-right:0;
+    color: #FFF;                          /* set this with a modifier */
+    position: relative;
+    p,span {
+        margin-left:15px;
+        margin-right:15px;
+        display:block;
+    }
+    .block-line1 {
+        margin-top:-15px;
+        //margin-left:10px;
+        //margin-right:10px;
+        font-size: 16px;
+        line-height:18px;
+    }
+    .block-line2 {
+        margin-top:10px;
+        //margin-right:10px;
+        //margin-left:10px;
+        font-size: 28px;
+        font-weight:bolder;
+        line-height:30px;
+    }
+    .block-line1a {
+        margin-top:-15px;
+        //margin-right:10px;
+        //margin-left:10px;
+        font-size: 22px;
+        line-height:22px;
+        text-align: left;
+    }
+    .block-line2a {
+        margin-top:10px;
+        //margin-right:10px;
+        //margin-left:10px;
+        font-size: 16px;
+        line-height:16px;
+        text-align: left;
+    }
+    .block-line1b {
+        margin-top:-15px;
+        //margin-left:10px;
+        //margin-right:10px;
+        margin-bottom:3px;
+        text-align: left;
+        font-size: 17px;
+        line-height:17px;
+        font-weight:bold;
+    }
+    .block-line2b {
+        //margin-left:10px;
+        //margin-right:10px;
+        text-align: left;
+        font-size: 13px;
+        line-height:16px;
+        font-weight:normal;
+    }
+    .block-line1d {
+        //margin-left:10px;
+        //margin-right:10px;
+        font-size: 18px;
+        line-height:20px;
+    }
+    .block-line1e {
+        margin-top:-20px;
+        font-size: 14px;
+        line-height:16px;
+        color:yellow;
+    }
+    .block-yellow-hiliter {
+        color:yellow;
+    }
+    .block-line1f {
+        margin-top:-20px;
+        font-size: 14px;
+        line-height:16px;
+    }
+    .block-line1e+.block-line1f {
+        margin-top:0px;
+    }
+    .block-line1f+.block-line1f {
+        margin-top:0px;
+    }
+    .block-grid-header {
+        margin-top:-15px;
+        //margin-right:10px;
+        //margin-left:10px;
+        font-size: 14px;
+        line-height:14px;
+        font-weight:bold;
+    }
+    @media (min-width: 768px) {
+        .block-grid-header {
+            font-size:13px;                    /* set this with a modifier */
+            line-height:14px;                   /* set this with a modifier */
+        }
+    }
+    .badge-right {
+        position:absolute;
+        bottom:0;
+        right:0;
+        font-size: 13px;
+        line-height:15px;
+        padding: 2px 7px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .badge-left {
+        position: absolute;
+        bottom: 0;
+        left:0;
+        margin-left:10px;
+        margin-right:10px;
+        text-align: left;
+        font-size: 13px;
+        line-height:15px;
+        //font-weight:bold;
+        padding-bottom: 2px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+
+//
+// alternate text colors in inverse navbars
+//
+.navbar-inverse {
+    .navbar-textalt {
+        .navbar-text;
+        color: #FFF;
+        font-size: 22px;
+        font-weight: normal;
+        margin-top:5px;
+        margin-bottom:0px;
+    }
+}
+
+//
+// for navbars with a row of buttons, use the button-row modifier on navbar and container
+//
+.navbar-button-row {
+    .navbar-fixed-top;
+    top: @page-header-height;
+    margin-bottom: 0px;
+    border-bottom-width: 0px;
+    z-index: 1;
+}
+
+.container-button-row {
+    padding-top:@page-header-height;
+    //padding-top:110px;  // with row for Today's date
+}
+
+
+.navbar > .block-grid-row,
+.navbar > .container,
+.navbar > .container-fluid {
+    padding-left:0px;
+    padding-right:0px;
+}
+#header_pagename {
+    //padding-top:15px;
+    font-size: 17px;
+    line-height: 38px;
+}
+.navbar-hamburger {
+    position: relative;
+    //float: right;
+    //margin-right: @navbar-padding-horizontal;
+    padding: 9px 10px;
+    //.navbar-vertical-align(34px);
+    background-color: transparent;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 3px solid transparent;
+    border-radius: @border-radius-base;
+
+    // We remove the `outline` here, but later compensate by attaching `:hover`
+    // styles to `:focus`.
+    &:focus {
+        outline: 0;
+    }
+    &:hover,
+    &:focus,
+    &.active {
+        background-color: @btn-active-hover-bg;
+        color:@btn-active-hover-color;
+        text-decoration: none;
+        border-color: lighten(@btn-active-hover-bg,10%);
+    }
+
+    // Bars
+    .icon-bar {
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: #fff;
+    }
+    .icon-bar + .icon-bar {
+        margin-top: 4px;
+    }
+}
+
+.header-hamburger-menu {
+    overflow: hidden;
+    position: absolute;
+    top: -203px;
+    right: -200px;
+    z-index: 10000;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+    border:2px solid #000;
+    display:none;
+
+}
+
+// visible menu is at left = 0
+.header-hamburger-menu.visible {
+    display:inline-block;
+    top:@page-header-height;
+    top:39px;
+    right:0;
+}
+
+// transition menu on click
+.header-hamburger-menu {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+

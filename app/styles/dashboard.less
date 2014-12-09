@@ -2,22 +2,10 @@
 // dashboard page specific styles
 //
 
-@dashboard-blue-bg: #0a254e;
-@dashboard-gray-bg: #1c1c1c;
-@dashboard-top5-panel:@btn-gd-menu-bg;
-@dashboard-header1:#838383;
-@dashboard-header2:#838383;
-@dashboard-header3:#0e3779;
-@dashboard-header4:#0a2357;
-@dashboard-column1:#838383;
-@dashboard-column2:#838383;
-@dashboard-column3:#305a92;
-@dashboard-column4:#2d4775;
-@dashboard-jersey-color:#030523;
 
 
 .dashboard-top5-panel {
-  background-color: @dashboard-top5-panel;
+  background-color: @dashboard-color-top5-panel;
   color:#fff;
   padding-left:10px;
   padding-right:15px;
@@ -55,42 +43,42 @@
 }
 
 .dashboard-color-header1 {
-  background-color: @dashboard-header1;
+  background-color: @dashboard-color-header1;
   color:#fff;
 }
 
 .dashboard-color-header2 {
-  background-color: @dashboard-header2;
+  background-color: @dashboard-color-header2;
   color:#fff;
 }
 
 .dashboard-color-header3 {
-  background-color: @dashboard-header3;
+  background-color: @dashboard-color-header3;
   color:#fff;
 }
 
 .dashboard-color-header4 {
-  background-color: @dashboard-header4;
+  background-color: @dashboard-color-header4;
   color:#fff;
 }
 
 .dashboard-color-column1 {
-  background-color: @dashboard-column1;
+  background-color: @dashboard-color-column1;
   color:#fff;
 }
 
 .dashboard-color-column2 {
-  background-color: @dashboard-column2;
+  background-color: @dashboard-color-column2;
   color:#fff;
 }
 
 .dashboard-color-column3 {
-  background-color: @dashboard-column3;
+  background-color: @dashboard-color-column3;
   color:#fff;
 }
 
 .dashboard-color-column4 {
-  background-color: @dashboard-column4;
+  background-color: @dashboard-color-column4;
   color:#fff;
 }
 
@@ -118,7 +106,7 @@
   .make-sm-column(2);
   padding-left:0px;
   padding-right:0px;
-  background-color: @dashboard-gray-bg;
+  background-color: @dashboard-color-gray-bg;
   color:#fff;
   height:100%;
   > .button-new {
@@ -156,8 +144,8 @@
   .make-lg-column(3);
   .make-md-column(3);
   .make-sm-column(3);
-  background-color: @dashboard-blue-bg;
-  background-color: @dashboard-gray-bg;
+  background-color: @dashboard-color-blue-bg;
+  background-color: @dashboard-color-gray-bg;
   color:#fff;
   height:100%;
   padding-top:15px;
@@ -485,6 +473,6 @@
 .table-jersey-badge {
   position:absolute;
   right:0px;
-  color: @dashboard-jersey-color;
+  color: @dashboard-color-jersey;
   font-weight: bold;
 }

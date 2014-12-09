@@ -1,14 +1,10 @@
 <!--suppress HtmlUnknownTarget -->
-{{!--
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
-		<div class="navbar-header pull-left">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
+        <div class="nav navbar-nav header-center-text" style="padding-top:10px;color:#fff;font-size:17px;">
+            <p id="header_message_1center" class="text-center">{{message_1center}}</p>
+        </div>
+        <div class="navbar-header">
             {{#if linkTo}}
                 {{#link-to linkTo classNames="navbar-brand"}}
                     <img alt="GoDeep Mobile" src="assets/img/logo.png">
@@ -18,47 +14,29 @@
                     <img alt="GoDeep Mobile" src="assets/img/logo.png">
                 {{/link-to}}
             {{/if}}
-		</div>
-        <div class="navbar-text xnavbar-collapse xcollapse center-block text-center">
-            <p id="header_message_1center" class="text-center">{{message_1center}}</p>
-        </div><!--/.navbar-collapse -->
-        <div class="navbar-textalt navbar-collapse collapse pull-right">
-            <span id="header_pagename" class="block-color-featuretext">{{pageName}}</span>
-        </div><!--/.navbar-collapse -->
+        </div>
+        <div class="navbar-collapse collapse">
+            <div class="nav navbar-nav pull-right">
+                <span id="header_pagename" class="block-color-featuretext">{{pageName}}</span>
+                {{#header-button class='navbar-hamburger' action="headerHamburgerMenu"}}
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                {{/header-button}}
+                <!--button type="button" class="navbar-hamburger">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button--->
+            </div>
+        </div>
     </div>
-    <div class="container-fluid block-color-header">
+    <div class="container-fluid header-dark">
         <span id="header_message_2left">{{message_2left}}</span>
         <span id="header_message_2right" class="pull-right">{{message_2right}}</span>
     </div>
-</div>
---}}
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-    <div class="nav navbar-nav header-center-text" style="padding-top:10px;color:#fff;font-size:17px;">
-        <p id="header_message_1center" class="text-center">{{message_1center}}</p>
-    </div>
-    <div class="navbar-header">
-    {{#if linkTo}}
-        {{#link-to linkTo classNames="navbar-brand"}}
-            <img alt="GoDeep Mobile" src="assets/img/logo.png">
-        {{/link-to}}
-    {{else}}
-        {{#link-to 'dashboard' classNames="navbar-brand"}}
-            <img alt="GoDeep Mobile" src="assets/img/logo.png">
-        {{/link-to}}
-    {{/if}}
-    </div>
-    <div class="navbar-collapse collapse">
-        <div class="nav navbar-nav pull-right" style="padding-top:10px;font-size:17px;">
-            <span id="header_pagename" class="block-color-featuretext">{{pageName}}</span>
-            <button type="button" class="btn">
-                hamburger
-            </button>
-        </div>
-    </div>
-        </div>
-    <div class="container-fluid block-color-header">
-        <span id="header_message_2left">{{message_2left}}</span>
-        <span id="header_message_2right" class="pull-right">{{message_2right}}</span>
+    <div class="header-hamburger-menu btn-group-vertical" {{bind-attr class="hamburgerMenuVisible:visible"}} role="group" aria-label="change play type menu">
+        {{#menu-button action="appShowScreenTips" param=screenTipsHandle }}screen tips{{/menu-button}}
+        {{#menu-button action="appSignOff" }}signoff{{/menu-button}}
     </div>
 </nav>

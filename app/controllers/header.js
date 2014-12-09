@@ -6,6 +6,7 @@ export default Ember.ObjectController.extend({
     message_2left:'2left',
     message_2right:'2right',
     linkTo:'dashboard',
+    hamburgerMenuVisible:false,
     setLinkTo: function(m) {
         this.set('linkTo', m);
     },
@@ -20,5 +21,24 @@ export default Ember.ObjectController.extend({
     },
     setPageName: function(pn) {
         this.set('pageName', pn);
+    },
+    hideHamburgerMenu: function() {
+        console.log('appHideHamburgerMenu');
+        this.set('hamburgerMenuVisible', false);
+    },
+    actions: {
+        appHideHamburgerMenu: function() {
+            console.log('appHideHamburgerMenu');
+            this.hideHamburgerMenu();
+        },
+        appSignOff: function() {
+            console.log('application.appSignOff');
+            this.hideHamburgerMenu();
+            this.transitionToRoute('/');
+        },
+        headerHamburgerMenu: function() {
+            console.log('headerHamburgerMenu');
+            this.toggleProperty('hamburgerMenuVisible');
+        }
     }
 });

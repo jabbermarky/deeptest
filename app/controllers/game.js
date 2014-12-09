@@ -6,6 +6,10 @@ export default Ember.ObjectController.extend({
     playType: '',
     playChanged: false,
     actions: {
+        appShowScreenTips: function() {
+            console.log('game.appShowScreenTips');
+            this.send('appHideHamburgerMenu');
+        },
         gameNextPlay: function() {
             console.log('nextPlay');
             var playNumber = this.get('playNumber');

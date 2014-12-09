@@ -1,20 +1,6 @@
 //
-// player page specific styles
+// players page specific styles
 //
-
-@players-color-header1: #9c9c9c;
-@players-color-header2: #0e3779;
-@players-color-header3: #0a2357;
-@players-color-header4: #07123c;
-@players-color-header5: #030523;
-@players-color-header6: @players-color-header1;
-
-@players-color-column1: @btn-gd-menu-lt-bg;
-@players-color-column2: @players-color-header2;
-@players-color-column3: @players-color-header3;
-@players-color-column4: @players-color-header4;
-@players-color-column5: @players-color-header5;
-@players-color-column6: @players-color-column1;
 
 @players-column1-width:40%;
 @players-column2-n-width:12%;
@@ -63,8 +49,7 @@
         width:@players-column1-width;
         text-align:left;
         font-weight: normal;
-        border: 3px solid @btn-gd-menu-lt-border;
-        //span:nth-child(1) {
+        border: 3px solid @btn-gd-menu-border-lt;
         span.players-name {
             position:absolute;
             top:5px;
@@ -74,14 +59,12 @@
             line-height: 22px;
             width:100%;
         }
-        //span:nth-child(2) {
         span.players-stats {
             position:absolute;
             bottom:5px;
             left:5px;
             font-weight:normal;
         }
-        //span:nth-child(3) {
         span.players-jersey-number {
             position:absolute;
             bottom:0px;
@@ -158,7 +141,7 @@
     .column6 {
         background-color:@players-color-column6;
         width:@players-column2-n-width;
-        border: 3px solid @btn-gd-menu-lt-border;
+        border: 3px solid @btn-gd-menu-border-lt;
         span {
             position:absolute;
             top:20px;

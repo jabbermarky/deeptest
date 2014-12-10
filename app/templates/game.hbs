@@ -1,6 +1,5 @@
 {{render "header"}}
 {{! this page uses a button row in the navbar. modify navbar with navbar-button-row for proper button spacing}}
-
 <nav class="navbar navbar-button-row" role="navigation">
     <div class="container-fluid block-color-header">
         <div>
@@ -34,8 +33,8 @@
         </div>
         <div class="navbar-right">
             {{#header-button class='navbar-btn btn-narrow' action="gameChangePlayType"}}
-                <span xclass="line1">change</span>
-                <span xclass="line2">play type</span>
+                <span>change</span>
+                <span>play type</span>
             {{/header-button}}
         </div>
         <div class="game-menu btn-group-vertical" {{bind-attr class="menuVisible:visible"}} role="group" aria-label="change play type menu">
@@ -48,117 +47,96 @@
 </nav>
 
 
-<div class='container-fluid container-game game' style="margin:10px;">
+<div class='container-fluid container-game' xstyle="margin:10px;">
     <div class="row flex  row-separator">
-        <div class="game-column game-header1">
+        <div class="column header1">
             <span>Click players below to select for grading on this play</span>
         </div>
-        <div class="game-column game-header2">
+        <div class="column header2">
             <span>Mental Grade</span>
         </div>
-        <div class="game-column game-header3">
+        <div class="column header3">
             <span>Technique Grade</span>
         </div>
-        <div class="game-column game-header4">
+        <div class="column header4">
             <span>Effort Grade</span>
         </div>
-        <div class="game-column game-header5">
+        <div class="column header5">
             <span>Click to set flag</span>
         </div>
     </div>
     <div class="row flex  row-separator">
-        <div class="game-column game-column1">
-            <span>QB</span>
-            <span>Smith, J.</span>
-            <span>4</span>
+        <div class="column column1">
+            <span class="player-position">QB</span>
+            <span class="player-name">Smith, J.</span>
+            <span class="player-jersey-number">4</span>
         </div>
-        <div class="game-column game-column2">
-            <span></span>
+        <div class="column column2">
+            {{#grade-button action="gameGradeDec2" value=mentalGrade group='mentalGrade' }}{{/grade-button}}
+            {{#grade-button action="gameGradeDec1" value=mentalGrade group='mentalGrade' }}{{/grade-button}}
+            {{#grade-button action="gameGradeReset" value=mentalGrade group='mentalGrade' }}{{/grade-button}}
+            {{#grade-button action="gameGradeInc1" value=mentalGrade group='mentalGrade' }}{{/grade-button}}
+            {{#grade-button action="gameGradeInc2" value=mentalGrade group='mentalGrade' }}{{/grade-button}}
         </div>
-        <div class="game-column game-column3">
-            <span></span>
+        <div class="column column3">
+            {{#grade-button action="gameGradeDec2" value=techniqueGrade group='techniqueGrade' }}{{/grade-button}}
+            {{#grade-button action="gameGradeDec1" value=techniqueGrade group='techniqueGrade' }}{{/grade-button}}
+            {{#grade-button action="gameGradeReset" value=techniqueGrade group='techniqueGrade' }}{{/grade-button}}
+            {{#grade-button action="gameGradeInc1" value=techniqueGrade group='techniqueGrade' }}{{/grade-button}}
+            {{#grade-button action="gameGradeInc2" value=techniqueGrade group='techniqueGrade' }}{{/grade-button}}
         </div>
-        <div class="game-column game-column4">
-            <span></span>
+        <div class="column column4">
+            {{#grade-button action="gameGradeDec2" value=effortGrade group='effortGrade' }}{{/grade-button}}
+            {{#grade-button action="gameGradeDec1" value=effortGrade group='effortGrade' }}{{/grade-button}}
+            {{#grade-button action="gameGradeReset" value=effortGrade group='effortGrade' }}{{/grade-button}}
+            {{#grade-button action="gameGradeInc1" value=effortGrade group='effortGrade' }}{{/grade-button}}
+            {{#grade-button action="gameGradeInc2" value=effortGrade group='effortGrade' }}{{/grade-button}}
         </div>
-        <div class="game-column game-column5">
-            <span>point of attack</span>
-        </div>
-    </div>
-    <div class="row flex  row-separator">
-        <div class="game-column game-column1">
-            <span>QB</span>
-            <span>Podzuluzinski, J.</span>
-            <span>12</span>
-        </div>
-        <div class="game-column game-column2">
-            <span></span>
-        </div>
-        <div class="game-column game-column3">
-            <span></span>
-        </div>
-        <div class="game-column game-column4">
-            <span></span>
-        </div>
-        <div class="game-column game-column5">
-            <span>point of attack</span>
+        <div class="column column5">
+            <span>at point of attack</span>
         </div>
     </div>
     <div class="row flex  row-separator">
-        <div class="game-column game-column1">
-            <span>QB</span>
-            <span>Podzuluzinski, J.</span>
-            <span>12</span>
+        <div class="column column1">
+            <span class="player-position">QB</span>
+            <span class="player-name">Podzuluzinski, J.</span>
+            <span class="player-jersey-number">12</span>
         </div>
-        <div class="game-column game-column2">
+        <div class="column column2">
             <span></span>
         </div>
-        <div class="game-column game-column3">
+        <div class="column column3">
             <span></span>
         </div>
-        <div class="game-column game-column4">
+        <div class="column column4">
             <span></span>
         </div>
-        <div class="game-column game-column5">
-            <span>point of attack</span>
+        <div class="column column5">
+            <span>at point of attack</span>
         </div>
     </div>
     <div class="row flex  row-separator">
-        <div class="game-column game-column1">
-            <span>QB</span>
-            <span>Podzuluzinski, J.</span>
-            <span>12</span>
+        <div class="column column1">
+            <span class="player-position">QB</span>
+            <span class="player-name">Jones, M.</span>
+            <span class="player-jersey-number">19</span>
         </div>
-        <div class="game-column game-column2">
+        <div class="column column2">
             <span></span>
         </div>
-        <div class="game-column game-column3">
+        <div class="column column3">
             <span></span>
         </div>
-        <div class="game-column game-column4">
+        <div class="column column4">
             <span></span>
         </div>
-        <div class="game-column game-column5">
-            <span>point of attack</span>
+        <div class="column column5">
+            <span>at point of attack</span>
         </div>
     </div>
-    <div class="row flex  row-separator">
-        <div class="game-column game-column1">
-            <span>QB</span>
-            <span>Podzuluzinski, J.</span>
-            <span>12</span>
-        </div>
-        <div class="game-column game-column2">
-            <span></span>
-        </div>
-        <div class="game-column game-column3">
-            <span></span>
-        </div>
-        <div class="game-column game-column4">
-            <span></span>
-        </div>
-        <div class="game-column game-column5">
-            <span>point of attack</span>
+    <div class="row flex  row-separator" {{action "gameAddPlayer"}}>
+        <div class="column column1">
+            <span class="add-player">add player</span>
         </div>
     </div>
 </div>

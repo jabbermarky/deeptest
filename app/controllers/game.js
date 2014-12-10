@@ -5,6 +5,9 @@ export default Ember.ObjectController.extend({
     menuVisible:false,
     playType: '',
     playChanged: false,
+    mentalGrade: -1,
+    techniqueGrade: 0,
+    effortGrade: 2,
     actions: {
         appShowScreenTips: function() {
             console.log('game.appShowScreenTips');
@@ -37,6 +40,49 @@ export default Ember.ObjectController.extend({
         },
         gamePauseGrading: function() {
             console.log('gamePauseGrading');
+        },
+        gameAddPlayer: function() {
+            console.log('gameAddPlayer');
+        },
+        gameGradeDec2: function(m) {
+            console.log('gameGradeDec2 %s', m);
+            switch (m) {
+                case 'mentalGrade': this.set(m,-2);
+                case 'techniqueGrade': this.set(m,-2);
+                case 'effortGrade': this.set(m,-2);
+            }
+        },
+        gameGradeDec1: function(m) {
+            console.log('gameGradeDec1 %s', m);
+            switch (m) {
+                case 'mentalGrade': this.set(m,-1);
+                case 'techniqueGrade': this.set(m,-1);
+                case 'effortGrade': this.set(m,-1);
+            }
+        },
+        gameGradeReset: function(m) {
+            console.log('gameGradeReset %s', m);
+            switch (m) {
+                case 'mentalGrade': this.set(m,0);
+                case 'techniqueGrade': this.set(m,0);
+                case 'effortGrade': this.set(m,0);
+            }
+        },
+        gameGradeInc1: function(m) {
+            console.log('gameGradeInc1 %s', m);
+            switch (m) {
+                case 'mentalGrade': this.set(m,1);
+                case 'techniqueGrade': this.set(m,1);
+                case 'effortGrade': this.set(m,1);
+            }
+        },
+        gameGradeInc2: function(m) {
+            console.log('gameGradeInc2 %s', m);
+            switch (m) {
+                case 'mentalGrade': this.set(m,2);
+                case 'techniqueGrade': this.set(m,2);
+                case 'effortGrade': this.set(m,2);
+            }
         },
         gameChangePlayTo: function(newType) {
             console.log('change play type to '+newType);

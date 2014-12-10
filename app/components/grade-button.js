@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
     tagName: 'button',
-    classNames: ['btn btn-gd-menu btn-xl btn-header btn-narrow'],
+    classNames: ['btn btn-gd-menu btn-xl xbtn-narrow btn-grade'],
     classNameBindings: ['isActive:active'],
     attributeBindings: ['type'],
     type: "button",

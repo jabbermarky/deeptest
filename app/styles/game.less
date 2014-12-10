@@ -8,22 +8,36 @@
 @game-column5-width:8%;
 @game-row-height:80px;
 
+.btn-grade {
+    height:80px;
+    padding-left:0;
+    padding-right:0;
+    width:20%;
+    &::before,
+    span::before {
+        margin-left:0;
+    }
+    &::after,
+    span::after {
+        margin-right:0;
+    }
+}
+// fix 1 pixel problem
+
+.btn-grade + .btn-grade {
+    margin-left:5px;
+}
+
 .container-game {
     padding-top:@page-header-height;
     padding-bottom:90px;
     margin:10px;
 
     .column {
-        .btn-narrow {
-            padding-left:5px;
-            padding-right:5px;
-            width:20%;
-        }
         position:relative;
         height:@game-row-height;
         display: -webkit-flex;
         display:flex;
-        padding:5px;
         border:0;
         outline:0;
         color:#fff;
@@ -47,6 +61,7 @@
     .header1 {
         background-color:@game-color-header1;
         width:@game-column1-width;
+        padding:5px;
         text-align:left;
         font-weight: normal;
         font-style: italic;
@@ -106,6 +121,7 @@
     .header2 {
         background-color:@game-color-header2;
         width:@game-column234-width;
+        padding:5px;
     }
 
     .column2 {
@@ -138,6 +154,7 @@
     .header3 {
         background-color:@game-color-header3;
         width:@game-column234-width;
+        padding:5px;
     }
 
     .column3 {
@@ -169,6 +186,7 @@
     .header4 {
         background-color:@game-color-header4;
         width:@game-column234-width;
+        padding:5px;
     }
 
     .column4 {
@@ -203,6 +221,7 @@
         font-style:italic;
         text-align:center;
         font-weight: normal;
+        padding:5px;
     }
 
     .column5 {
@@ -212,6 +231,7 @@
         font-weight: normal;
         padding:0;
         span {
+            padding:5px;
             position:absolute;
             top:20px;
             font-weight:normal;

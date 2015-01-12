@@ -1,8 +1,8 @@
 import DS from 'ember-data';
 
 var attr = DS.attr,
-    hasMany = DS.hasMany,
-    belongsTo = DS.belongsTo;
+    hasMany = DS.hasMany;
+    //belongsTo = DS.belongsTo;
 
 var Organization = DS.Model.extend({
     // id                           //    [Organization_Id] [bigint] NOT NULL,
@@ -39,7 +39,7 @@ Organization.reopenClass({
             name: "Princeton University",
             shortName: "Princeton",
             mascotName: "Tigers"
-        },
+        }
     ]
 });
 

@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 var attr = DS.attr,
-    hasMany = DS.hasMany,
+    //hasMany = DS.hasMany,
     belongsTo = DS.belongsTo;
 
 var GameStat = DS.Model.extend({

@@ -47,41 +47,41 @@ export default Ember.ObjectController.extend({
         gameGradeDec2: function(m) {
             console.log('gameGradeDec2 %s', m);
             switch (m) {
-                case 'mentalGrade': this.set(m,-2);
-                case 'techniqueGrade': this.set(m,-2);
-                case 'effortGrade': this.set(m,-2);
+                case 'mentalGrade': this.set(m,-2);break;
+                case 'techniqueGrade': this.set(m,-2);break;
+                case 'effortGrade': this.set(m,-2);break;
             }
         },
         gameGradeDec1: function(m) {
             console.log('gameGradeDec1 %s', m);
             switch (m) {
-                case 'mentalGrade': this.set(m,-1);
-                case 'techniqueGrade': this.set(m,-1);
-                case 'effortGrade': this.set(m,-1);
+                case 'mentalGrade': this.set(m,-1);break;
+                case 'techniqueGrade': this.set(m,-1);break;
+                case 'effortGrade': this.set(m,-1);break;
             }
         },
         gameGradeReset: function(m) {
             console.log('gameGradeReset %s', m);
             switch (m) {
-                case 'mentalGrade': this.set(m,0);
-                case 'techniqueGrade': this.set(m,0);
-                case 'effortGrade': this.set(m,0);
+                case 'mentalGrade': this.set(m,0);break;
+                case 'techniqueGrade': this.set(m,0);break;
+                case 'effortGrade': this.set(m,0);break;
             }
         },
         gameGradeInc1: function(m) {
             console.log('gameGradeInc1 %s', m);
             switch (m) {
-                case 'mentalGrade': this.set(m,1);
-                case 'techniqueGrade': this.set(m,1);
-                case 'effortGrade': this.set(m,1);
+                case 'mentalGrade': this.set(m,1);break;
+                case 'techniqueGrade': this.set(m,1);break;
+                case 'effortGrade': this.set(m,1);break;
             }
         },
         gameGradeInc2: function(m) {
             console.log('gameGradeInc2 %s', m);
             switch (m) {
-                case 'mentalGrade': this.set(m,2);
-                case 'techniqueGrade': this.set(m,2);
-                case 'effortGrade': this.set(m,2);
+                case 'mentalGrade': this.set(m,2);break;
+                case 'techniqueGrade': this.set(m,2);break;
+                case 'effortGrade': this.set(m,2);break;
             }
         },
         gameChangePlayTo: function(newType) {

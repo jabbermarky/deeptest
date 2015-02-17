@@ -15,7 +15,7 @@
             </span>
             <span class="block-line1f"><b>Formation:</b> [field value]</span>
             <span class="block-line1f"><b>Backfield:</b> [field value]</span>
-            <span class="block-line1f" {{bind-attr class="playChanged:block-yellow-hiliter"}}><b>Play:</b> [play call] {{playType}}</span>
+            <span {{bind-attr class=":block-line1f playChanged:block-yellow-hiliter"}}><b>Play:</b> [play call] {{playType}}</span>
         </div>
         <div class="navbar-text">
             <span class="block-line1e">
@@ -37,7 +37,7 @@
                 <span>play type</span>
             {{/header-button}}
         </div>
-        <div class="game-menu btn-group-vertical" {{bind-attr class="menuVisible:visible"}} role="group" aria-label="change play type menu">
+        <div {{bind-attr class=":game-menu :btn-group-vertical menuVisible:visible"}} role="group" aria-label="change play type menu">
             {{#menu-button class="btn-gd-menu-alt" action="gameChangePlayTo" param="kick" }}kick/punt{{/menu-button}}
             {{#menu-button class="btn-gd-menu-alt" action="gameChangePlayTo" param="penalty-no-play"   }}penalty - no play{{/menu-button}}
             {{#menu-button class="btn-gd-menu-alt" action="gameChangePlayTo" param="penalty-offense" }}penalty - offense{{/menu-button}}

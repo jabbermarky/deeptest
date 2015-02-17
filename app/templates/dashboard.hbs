@@ -10,13 +10,13 @@
     </div>
     <div class="section-main">
         {{outlet}}
-        <div class="gd-modal btn-group-vertical" {{bind-attr class="menuVisible:visible"}} role="group" aria-label="Dashboard Sub Menu">
-            {{outlet menu}}
+        <div {{bind-attr class=":gd-modal :btn-group-vertical menuVisible:visible"}} role="group" aria-label="Dashboard Sub Menu">
+            {{outlet "menu"}}
         </div>
     </div>
     <div class="section-right">
-        {{outlet top-new-players}}
-        {{outlet best-unit-impact}}
-        {{outlet veteran-watch-list}}
+        {{outlet "top-new-players"}}
+        {{outlet "best-unit-impact"}}
+        {{outlet "veteran-watch-list"}}
     </div>
 </div>

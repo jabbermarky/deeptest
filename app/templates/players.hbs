@@ -34,15 +34,15 @@
             <span>Inactive Flag</span>
         </div>
     </div>
-    {{#each allPlayers}}
+    {{#each player in allPlayers}}
     <div class="row flex  row-separator">
-        <div class="column column1" {{action 'playersShowPlayer' this}}>
-            <span class="players-name">{{shortNameInitialLast}}</span>
+        <div class="column column1" {{action 'playersShowPlayer' player}}>
+            <span class="players-name">{{player.shortNameInitialLast}}</span>
             <span class="players-stats">6'4&nbsp;&nbsp;&nbsp;220&nbsp;&nbsp;85%&nbsp;&nbsp;(21)</span>
-            <span class="players-jersey-number">{{jerseyNumber}}</span>
+            <span class="players-jersey-number">{{player.jerseyNumber}}</span>
         </div>
         <div class="column column2">
-            <span>{{position}}</span>
+            <span>{{player.position}}</span>
         </div>
         <div class="column column3">
             <span></span>

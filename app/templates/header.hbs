@@ -23,11 +23,6 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 {{/header-button}}
-                <!--button type="button" class="navbar-hamburger">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button--->
             </div>
         </div>
     </div>
@@ -35,7 +30,7 @@
         <span id="header_message_2left">{{message_2left}}</span>
         <span id="header_message_2right" class="pull-right">{{message_2right}}</span>
     </div>
-    <div class="header-hamburger-menu btn-group-vertical" {{bind-attr class="hamburgerMenuVisible:visible"}} role="group" aria-label="hamburger menu">
+    <div {{bind-attr class=":header-hamburger-menu :btn-group-vertical hamburgerMenuVisible:visible"}} role="group" aria-label="hamburger menu">
         {{#menu-button class="btn-gd-menu-alt" action="appShowScreenTips" param=screenTipsHandle }}screen tips{{/menu-button}}
         {{#menu-button class="btn-gd-menu-alt" action="appSignOff" }}signoff{{/menu-button}}
     </div>

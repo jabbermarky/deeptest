@@ -13,15 +13,15 @@
     </tr>
     </thead>
     <tbody>
-    {{#each top5Players}}
-        {{#link-to "player"  player tagName="tr"}}
+    {{#each stat in top5Players}}
+        {{#link-to "player"  stat.player tagName="tr"}}
             <td class="td1">
-                {{#link-to "player" player}}
-                    {{player.shortNameInitialLast}} / {{player.position}} / {{player.classYr}}
+                {{#link-to "player" stat.player}}
+                    {{stat.player.shortNameInitialLast}} / {{stat.player.position}} / {{stat.player.classYr}}
                 {{/link-to}}
             </td>
             <td class="td2">
-                {{overallGrade}}% / {{numGames}}
+                {{stat.overallGrade}}% / {{stat.numGames}}
             </td>
         {{/link-to}}
     {{else}}

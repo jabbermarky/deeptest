@@ -15,10 +15,10 @@
     </tr>
     </thead>
     <tbody>
-    {{#each filteredContent}}
-        {{#link-to "player" this tagName="tr"}}
-            <td class="td1">{{#link-to "player" this}}{{shortNameInitialLast}} / {{position}}{{/link-to}}</td>
-            <td class="td2">{{seasonAvgGrade}}% / {{seasonNumGames}}</td>
+    {{#each player in filteredContent}}
+        {{#link-to "player" player tagName="tr"}}
+            <td class="td1">{{#link-to "player" player}}{{player.shortNameInitialLast}} / {{player.position}}{{/link-to}}</td>
+            <td class="td2">{{player.seasonAvgGrade}}% / {{player.seasonNumGames}}</td>
         {{/link-to}}
     {{else}}
         <tr>

@@ -10,25 +10,25 @@
 <div class='container-fluid container-button-row games'>
     <table cellpadding=0 cellspacing=0 class="table games-list">
         <tbody>
-            {{#each controller}}
+            {{#each item in controller}}
             <tr class="games-list-home">
                 <td class="td1 games-list-ltgray">Home</td>
-                <td class="td2">{{homeTeam}}</td>
-                <td class="td3">{{homeScore}}</td>
+                <td class="td2">{{item.homeTeam}}</td>
+                <td class="td3">{{item.homeScore}}</td>
                 <td class="td4 games-list-ltgray">Date</td>
-                <td class="td5">{{date}}</td>
+                <td class="td5">{{item.date}}</td>
                 <td class="td6 games-list-ltgray">Surface</td>
-                <td class="td7">{{surface}}</td>
-                <td class="td8" rowspan="2"><button class="btn btn-gd-menu btn-gd-menu-alt btn-xl pull-right" {{action "gradeGame" this}}>grade game</button></td>
+                <td class="td7">{{item.surface}}</td>
+                <td class="td8" rowspan="2"><button class="btn btn-gd-menu btn-gd-menu-alt btn-xl pull-right" {{action "gradeGame" item}}>grade game</button></td>
             </tr>
             <tr class="games-list-visitor">
                 <td class="td1 games-list-ltgray">Visitor</td>
-                <td class="td2">{{visitorTeam}}</td>
-                <td class="td3">{{visitorScore}}</td>
+                <td class="td2">{{item.visitorTeam}}</td>
+                <td class="td3">{{item.visitorScore}}</td>
                 <td class="td4 games-list-ltgray">Kickoff</td>
-                <td class="td5">{{kickoff}}</td>
+                <td class="td5">{{item.kickoff}}</td>
                 <td class="td6 games-list-ltgray">Field Cond</td>
-                <td class="td7">{{fieldCond}}</td>
+                <td class="td7">{{item.fieldCond}}</td>
             </tr>
             {{else}}
             <tr>

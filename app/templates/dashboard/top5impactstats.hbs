@@ -8,15 +8,15 @@
     </tr>
     </thead>
     <tbody>
-    {{#each filteredContent}}
-        {{#link-to "player"  player tagName="tr"}}
+    {{#each stat in filteredContent}}
+        {{#link-to "player"  stat.player tagName="tr"}}
             <td class="td1">
-                {{#link-to "player" player}}
-                    {{player.shortNameInitialLast}} / {{player.position}} / {{player.classYr}}
+                {{#link-to "player" stat.player}}
+                    {{stat.player.shortNameInitialLast}} / {{stat.player.position}} / {{stat.player.classYr}}
                 {{/link-to}}
             </td>
             <td class="td2">
-                {{unitImpactGrade}}% / {{numGames}}
+                {{stat.unitImpactGrade}}% / {{stat.numGames}}
             </td>
         {{/link-to}}
     {{else}}

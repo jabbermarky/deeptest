@@ -13,10 +13,10 @@
             <h1>Reports Template</h1>
             <table>
                 <tbody>
-                {{#each}}
+                {{#each item in controller}}
                     <tr>
-                        <td>{{name}}</td>
-                        <td>{{description}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.description}}</td>
                     </tr>
                 {{else}}
                     <tr>

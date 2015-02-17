@@ -1,9 +1,5 @@
 import DS from 'ember-data';
 
-export default DS.Model.extend({
-
-});
-
 var attr = DS.attr;
 //var hasMany = DS.hasMany;
 //var belongsTo = DS.belongsTo;

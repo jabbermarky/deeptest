@@ -1,14 +1,14 @@
 {{render "bigheader"}}
 <div class='container container-index index-background'>
     <div class="row row-index">
-        <p class="col-sm-5 col-md-5 col-lg-4" {{bind-attr class="credentialError:bg-danger"}}>{{errorMessage}}</p>
+        <p {{bind-attr class=":col-sm-5 :col-md-5 :col-lg-4 credentialError:bg-danger"}}>{{errorMessage}}</p>
     </div>
     <div class="row row-index">
         <div class="col-sm-5 col-md-5 col-lg-4 ">
-            <div class="row" {{bind-attr class="credentialError:has-error"}}>
+            <div {{bind-attr class=":row credentialError:has-error"}}>
                 {{input type="text" class="form-control" value=username placeholder="Email address"}}
             </div>
-            <div class="row" {{bind-attr class="credentialError:has-error"}}>
+            <div {{bind-attr class=":row credentialError:has-error"}}>
                 {{input type="password" class="form-control" value=password placeholder="Password"}}
             </div>
         </div>
